@@ -1,9 +1,16 @@
-$main-text-color: #212121;
-$accent-main-color: #2196f3;
+// Text colors
+$main-text-color: #ffffff;
+$secondary-text-color: #000000;
+$third-text-color: #907e82;
+
+// Accent colors
+$accent-main-color: #d41443;
+$accent-secondary-color: #ffa5ba;
 
 // Cubic-bezier
 $cubic-timing: cubic-bezier(0.4, 0, 0.2, 1);
 
 // Fonts
-$main-font: 'Roboto', sans-serif;
-$secondary-font: 'Raleway', sans-serif;
+$main-font: 'DM Sans', sans-serif;
+$secondary-font: 'Titan One', sans-serif;
+
