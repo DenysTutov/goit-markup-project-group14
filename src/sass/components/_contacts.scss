@@ -1,0 +1,54 @@
+.contacts-section {
+    margin: auto;
+}
+
+.contacts__category{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.83;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: $main-text-color;
+    border-radius: 4px;
+    &--cafe {
+        background-color: $background-color-beige;
+    }
+    &--foodtruck {
+        background-color: $background-color-green;
+    }
+
+}
+.contacts__item {
+    width: 220px;
+    padding: 35px 21px 51px 20px;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+
+    &:not(:last-child) {
+        margin-bottom: 12px;
+    }
+}
+.contacts__category {
+    margin-bottom: 25px;
+}
+.contacts__city {
+    margin-bottom: 10px;
+}
+.contacts__info {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #E1E1E1;
+}
+
+.contacts__time {
+    font-weight: 500;
+font-size: 12px;
+line-height: 1.83;
+color: $accent-secondary-color
+}
+
+.contacts__time {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid $border-bottom;
+}
