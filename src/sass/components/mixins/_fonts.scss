@@ -1,6 +1,7 @@
 // Миксин для шрифта (размер шрифта, жирность, line-height, letter-spacing)
 
 @mixin main-font($font-size, $font-weight, $line-height, $letter-spacing: 0.04em) {
+
   font-family: $main-font;
   font-style: normal;
   font-size: $font-size;
