@@ -42,7 +42,6 @@
 .hero__title {
   @include secondary-font(26px, 400, 30px);
   color: $main-text-color;
-  width: 220px;
   margin-bottom: 20px;
 }
 
