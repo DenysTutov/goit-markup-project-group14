@@ -4,8 +4,11 @@
  */
 
 // Стили для файла с примером HTML-фрагмента
-@import './example';
+@import './components/mixins/fonts';
 @import './utils/variables';
 @import './utils/visually-hidden';
-@import './components/mixins/fonts';
+@import './base/reset';
+@import './components/container';
 
+// Components
+@import './components/header';
