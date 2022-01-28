@@ -1,29 +1,40 @@
 .header__buy-now {
-    
-    display: flex;
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
-    width: 160px;
+    text-align: center;
     height: 44px;
-    margin: 0;
-    cursor: pointer;
+    padding-left: 37.23px;
+    padding-right: 37.23px;
 
-    border: none;
-    border-radius: 22px;
-
-    
-    background-color: $main-text-color;
-}
-
-.header__buy-now--text {
-    font-family: DM Sans;
+    font-family: 'DM Sans';
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
     line-height: 1.31;
-    align-items: center;
 
-    padding-left: 37.23px;
-    padding-right: 53.33px;
+    background-color: $main-text-color;
+    color: $accent-main-color;
 
-    color: $accent-main-color; 
+    border: none;
+    border-radius: 22px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        background-color: #ECEBEB;
+    }
 }
+
+.header__buy-now::after {
+    content: '';
+    width: 7px;
+    height: 10px;
+    padding-top: 19px;
+    margin-left: 10px;
+    background-image: url('/images/arrow.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
