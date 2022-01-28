@@ -6,3 +6,30 @@
   background-color: transparent;
   cursor: pointer;
 }
+
+@mixin base-button {
+  @include button;
+  align-items: center;
+
+  height: 44px;
+  padding-left: 37px;
+  padding-right: 37px;
+  border-radius: 22px;
+  margin-left: 30px;
+
+  @include main-font(16px, 700, 21px, 0);
+
+  &::after {
+    content: ' ';
+    display: block;
+    width: 6px;
+    height: 10px;
+    margin-left: 12px;
+
+    background-image: url('../images/arrow-in-button.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateY(1px);
+  }
+}

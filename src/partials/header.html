@@ -45,6 +45,7 @@
       <div class="hero__bg-circle"></div>
       <picture>
         <source srcset="./images/hero-icecream-mobile.png 1x" media="(max-width: 767px)" />
+        <source srcset="./images/hero-icecream-desktop.png 1x" media="(min-width: 1200px)" />
         <source srcset="./images/hero-icecream-tablet.png 1x" media="(min-width: 768px)" />
         <img class="hero__img" src="./images/hero-icecream-tablet.png" alt="Foto icecream" />
       </picture>
@@ -57,11 +58,23 @@
             incididunt ut labore et
           </p>
 
-          <img class="secondary-img__button" src="./images/btn-arrow.svg" alt="Arrow" />
+          <picture>
+            <source srcset="./images/hero-bnt-arrow-tablet.png 1x" media="(max-width: 1199px)" />
+            <source srcset="./images/hero-bnt-arrow-desktop.png 1x" media="(min-width: 1200px)" />
+            <img
+              class="secondary-img__button"
+              src="./images/hero-bnt-arrow-tablet.png"
+              alt="Arrow"
+            />
+          </picture>
         </div>
       </div>
 
-      <img class="hero__img--girl" src="./images/hero-girl-tablet.png" alt="Girl with icecream" />
+      <picture>
+        <source srcset="./images/hero-girl-tablet.png 1x" media="(max-width: 1199px)" />
+        <source srcset="./images/hero-girl-desktop.png 1x" media="(min-width: 1200px)" />
+        <img class="hero__img--girl" src="./images/hero-girl-tablet.png" alt="Girl with icecream" />
+      </picture>
     </section>
   </div>
 </header>
