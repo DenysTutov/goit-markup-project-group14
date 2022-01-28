@@ -13,28 +13,55 @@
     </nav>
 
     <section class="hero">
-      <div class="hero__bg-circle"></div>
-      <picture>
-        <source srcset="./images/hero-img-mobile.png 1x" media="(max-width: 767px)" />
-        <source srcset="./images/hero-img-tablet.png 1x" media="(min-width: 768px)" />
-        <img class="hero__img" src="./images/hero-img-mobile.png" alt="Foto icecream" />
-      </picture>
+      <div class="content-thumb">
+        <div class="hero__title-thumb">
+          <h1 class="hero__title">
+            Ice cream <br />
+            made with <br />
+            <span class="hero__title-accent">passion</span>
+          </h1>
+          <ul class="hero__button-list">
+            <li class="hero__button-item">
+              <a href="#" class="hero__button hero__button--accent">Products</a>
+            </li>
+            <li class="hero__button-item">
+              <a href="#" class="hero__button hero__button--reverse">How it’s made?</a>
+            </li>
+          </ul>
+        </div>
 
-      <div class="hero__title-wrapper">
-        <h1 class="hero__title">
-          Ice cream <br />
-          made with <br />
-          <span class="hero__title-accent">passion</span>
-        </h1>
-        <ul class="hero__button-list">
-          <li class="hero__button-item">
-            <a href="#" class="hero__button hero__button--accent">Products</a>
+        <ul class="quantity-point__list">
+          <li class="quantity-point__item">
+            <p class="quantity-point__number">16</p>
+            <p class="quantity-point__cafes">cafes</p>
           </li>
-          <li class="hero__button-item">
-            <a href="#" class="hero__button hero__button--reverse">How it’s made?</a>
+          <li class="quantity-point__item">
+            <p class="quantity-point__number">23</p>
+            <p class="quantity-point__cafes">food trucks</p>
           </li>
         </ul>
       </div>
+
+      <div class="hero__bg-circle"></div>
+      <picture>
+        <source srcset="./images/hero-icecream-mobile.png 1x" media="(max-width: 767px)" />
+        <source srcset="./images/hero-icecream-tablet.png 1x" media="(min-width: 768px)" />
+        <img class="hero__img" src="./images/hero-icecream-tablet.png" alt="Foto icecream" />
+      </picture>
+
+      <div class="hero__secondary-img-thumb">
+        <img class="hero__img--milk" src="./images/hero-milk-tablet.png" alt="Milk" />
+        <div class="secondary-img__text-thumb">
+          <p class="secondary-img__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et
+          </p>
+
+          <img class="secondary-img__button" src="./images/btn-arrow.svg" alt="Arrow" />
+        </div>
+      </div>
+
+      <img class="hero__img--girl" src="./images/hero-girl-tablet.png" alt="Girl with icecream" />
     </section>
   </div>
 </header>

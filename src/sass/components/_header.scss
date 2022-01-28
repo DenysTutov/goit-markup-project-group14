@@ -22,6 +22,7 @@
 
 //Header navigation
 .header__main-nav {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,10 +32,12 @@
 
   @media screen and (min-width: 768px) {
     padding-top: 37px;
+    margin-bottom: 15px;
   }
 
   @media screen and (min-width: 1200px) {
   }
+  z-index: 100;
 }
 
 .header__logo {
@@ -46,36 +49,83 @@
   @include button;
 }
 
-//Hero
-.hero__title-wrapper {
-  position: absolute;
+.header__button-baynow {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    @include button;
+    align-items: center;
+
+    height: 44px;
+    padding-left: 37px;
+    padding-right: 37px;
+    background-color: $main-text-color;
+    border-radius: 22px;
+    margin-left: 30px;
+
+    @include main-font(16px, 700, 21px, 0);
+    color: $accent-main-color;
+  }
+}
+
+/////////////////////////Hero
+.content-thumb {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero__title-thumb {
+  position: relative;
+  z-index: 50;
 }
 
 .hero__title {
   @include secondary-font(26px, 400, 30px);
   color: $main-text-color;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    @include secondary-font(22px, 400, 25px);
+  }
+
+  @media screen and (min-width: 1200px) {
+  }
 }
 
 .hero__title-accent {
   @include secondary-font(48px, 400, 47px);
   color: $accent-main-color;
+
+  @media screen and (min-width: 768px) {
+    @include secondary-font(34px, 400, 31px);
+  }
+
+  @media screen and (min-width: 1200px) {
+  }
 }
 
 .hero__bg-circle {
   border-radius: 50%;
   background-color: $accent-secondary-color;
-  width: 346px;
-  height: 346px;
 
-  // @media screen and (max-width: 767px) {
-  //   width: 346px;
-  //   height: 346px;
-  // }
+  @media screen and (max-width: 767px) {
+    width: 346px;
+    height: 346px;
+
+    position: absolute;
+    bottom: 75px;
+    right: 0;
+    transform: translateX(62px);
+  }
 
   @media screen and (min-width: 768px) {
     width: 324px;
     height: 324px;
+
+    position: absolute;
+    bottom: 46px;
+    right: 137px;
+    transform: translateX(0);
   }
 }
 
@@ -83,18 +133,29 @@
   @media screen and (max-width: 767px) {
     position: absolute;
     bottom: 0px;
-    right: 0px;
+    right: 32px;
+
+    &--girl {
+      display: none;
+    }
   }
 
   @media screen and (min-width: 768px) {
     position: absolute;
     bottom: 0px;
-    right: 0px;
+    right: 247px;
+
+    &--girl {
+      position: absolute;
+      bottom: 0px;
+      right: 34px;
+    }
   }
 }
 
 .hero__button-list {
   display: inline-flex;
+  margin-bottom: 19px;
 }
 
 .hero__button-item {
@@ -125,21 +186,62 @@
   }
 }
 
-.header__button-baynow {
+//Quantity points
+.quantity-point__list {
+}
+
+.quantity-point__item {
+  padding-right: 10px;
+
+  &:not(:last-child) {
+    margin-bottom: 13px;
+  }
+
+  &::before {
+    content: ' ';
+
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: $main-text-color;
+    border-radius: 50%;
+    transform: translateX(35px);
+  }
+}
+
+.quantity-point__number {
+  @include secondary-font(28px, 400, 32px, 0.04em);
+  color: $accent-main-color;
+  position: relative;
+  text-align: right;
+}
+
+.quantity-point__cafes {
+  @include main-font(8px, 400, 10px, 0);
+  color: $main-text-color;
+  text-align: right;
+}
+
+/////Secondary image
+.hero__secondary-img-thumb {
   display: none;
 
   @media screen and (min-width: 768px) {
-    @include button;
-    align-items: center;
-
-    height: 44px;
-    padding-left: 37px;
-    padding-right: 37px;
-    background-color: $main-text-color;
-    border-radius: 22px;
-    margin-left: 30px;
-
-    @include main-font(16px, 700, 21px, 0);
-    color: $accent-main-color;
+    display: inline-flex;
+    align-items: flex-end;
   }
+
+  @media screen and (min-width: 1200px) {
+  }
+}
+
+.secondary-img__text-thumb {
+  width: 115px;
+  padding-bottom: 6px;
+}
+
+.secondary-img__text {
+  @include main-font(8px, 400, 12px, 0);
+  color: $main-text-color;
+  margin-bottom: 7px;
 }
