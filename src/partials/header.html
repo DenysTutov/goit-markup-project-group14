@@ -2,17 +2,24 @@
   <div class="container header__relative">
     <nav class="header__main-nav">
       <a href="#" class="header__logo"><img src="./images/logo-header.svg" alt="Logo" /></a>
-      <button type="button" class="mobile-menu__button-open">
-        <svg width="20" height="12" aria-label="Кнопка мобильного меню">
-          <use class="mobile-menu__menu-icon" href="./images/sprite.svg#menu-burger"></use>
-        </svg>
-      </button>
-      <button class="header__button--bay"></button>
+      <div>
+        <button type="button" class="mobile-menu__button-open">
+          <svg width="20" height="12" aria-label="Кнопка мобильного меню">
+            <use class="mobile-menu__menu-icon" href="./images/sprite.svg#menu-burger"></use>
+          </svg>
+        </button>
+        <button class="header__button-baynow">Buy now</button>
+      </div>
     </nav>
 
     <section class="hero">
       <div class="hero__bg-circle"></div>
-      <img class="hero__img" src="./images/hero-img-mobile.png" alt="Foto icecream" />
+      <picture>
+        <source srcset="./images/hero-img-mobile.png 1x" media="(max-width: 767px)" />
+        <source srcset="./images/hero-img-tablet.png 1x" media="(min-width: 768px)" />
+        <img class="hero__img" src="./images/hero-img-mobile.png" alt="Foto icecream" />
+      </picture>
+
       <div class="hero__title-wrapper">
         <h1 class="hero__title">
           Ice cream <br />

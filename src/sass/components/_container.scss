@@ -10,9 +10,13 @@
 
   @media screen and (min-width: 768px) {
     max-width: 768px;
+    padding-left: 34px;
+    padding-right: 34px;
   }
 
   @media screen and (min-width: 1200px) {
     max-width: 1200px;
+    padding-left: 45px;
+    padding-right: 45px;
   }
 }
