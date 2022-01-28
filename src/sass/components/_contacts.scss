@@ -1,0 +1,199 @@
+.contacts-section {
+    background-color: $background-color-light-rose;
+}
+
+.contacts__list {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 54px;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        // justify-content: center;
+        margin-bottom: 81px;
+    }
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        // justify-content: center;
+        margin-bottom: 86px;
+    }
+}
+
+
+.contacts__list-item {
+    margin-left: auto;
+    margin-right: auto;
+    width: 220px;
+    padding: 43px 21px 43px 20px;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+    background-color: $main-text-color;
+
+    &:not(:last-child) {
+        margin-bottom: 12px;
+    }
+
+    @media screen and (min-width: 768px) {
+      
+        &:not(:last-child) {
+            margin-right:20px;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        &:not(:last-child) {
+        margin-right:29px;
+    }
+}
+}
+    
+.contacts__list-category {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1.83;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: $main-text-color;
+    border-radius: 4px;
+
+    margin-bottom: 25px;
+
+    @media screen and (min-width: 768px) {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.87;
+     
+    }
+    
+    &--cafe {
+        padding: 0 24px;
+        background-color: $background-color-beige;
+    }
+    &--foodtruck {
+        padding: 0 27px;
+        background-color: $background-color-green;
+    }
+}
+
+.contacts__list-city {
+    font-size: 12px;
+    line-height: 1.83;
+    letter-spacing: 0.04em;
+
+    margin-bottom: 10px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+        line-height: 1.86;
+        margin-bottom: 14px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 16px;
+        line-height: 1.87;
+        margin-bottom: 10px;
+    }
+}
+
+
+.contacts__list-info {
+    font-size: 12px;
+    line-height: 1.5;
+    color: $third-text-color;
+
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #E1E1E1;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 30px;
+        font-size: 14px;
+    line-height: 1.64;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 32px;
+        font-size: 16px;
+        line-height: 1.81;
+    }
+}
+
+.contacts__list-days {
+    font-size: 12px;
+    line-height: 1.83;
+    
+}
+
+.contacts__list-time {
+    font-size: 12px;
+    line-height: 1.83;
+    color: $accent-secondary-color;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid $border-bottom;
+}
+
+.contacts__list-address {
+    font-style: normal;
+    font-size: 12px;
+    line-height: 1.5;
+    color: $third-text-color;
+
+    &--mail,
+    &--phone {
+    color: $third-text-color;
+}
+}
+
+.btn__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+    }
+}
+
+
+.btn__contacts--locations {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.31;
+    color: $main-text-color;
+    background: $accent-main-color;
+    border-radius: 22px;
+    border: none;
+
+    width: 161px;
+    height: 44px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+
+    @media screen and (min-width: 768px) {
+        margin-right: 15px;
+    }
+}
+
+.btn__contacts--franchise {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.31;
+    color: $accent-main-color;
+    background: $main-text-color;
+    border-radius: 22px;
+    border: none;
+
+    width: 161px;
+    height: 44px;
+    margin-left: auto;
+    margin-right: auto;
+ 
+    @media screen and (min-width: 768px) {
+        margin-left: 0px;
+    }
+}
