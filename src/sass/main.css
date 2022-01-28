@@ -158,6 +158,21 @@ a {
     font-weight: 700;
     line-height: 1.3125;
     letter-spacing: 0;
+    color: #d41443;
+    background-color: #ffffff;
+  }
+  .header__button-baynow::after {
+    content: ' ';
+    display: block;
+    width: 6px;
+    height: 10px;
+    margin-left: 12px;
+    background-image: url("../images/arrow-in-button.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-transform: translateY(1px);
+            transform: translateY(1px);
   }
 }
 
@@ -388,5 +403,93 @@ a {
   letter-spacing: 0;
   color: #ffffff;
   margin-bottom: 7px;
+}
+
+.section-about {
+  background-color: #fff5f6;
+}
+
+.container__text {
+  font-family: "Titan One", sans-serif;
+  font-style: 400;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffa5ba;
+  margin-bottom: 15px;
+  padding-top: 125px;
+}
+
+.container__title {
+  font-family: "Titan One", sans-serif;
+  font-style: 400;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.14706;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #d41443;
+  margin-bottom: 26px;
+}
+
+.container__text-black {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.125;
+  letter-spacing: 0.04em;
+  color: #000000;
+  margin-bottom: 47px;
+}
+
+.container__text-gray {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.125;
+  letter-spacing: 0.04em;
+  color: #907e82;
+}
+
+@media screen and (max-width: 767px) {
+  .container__text-gray {
+    height: 133px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/milk-mobile.png);
+  }
+}
+
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+  .container__text-gray {
+    background-image: url(../images/milk-mobile@2x.png);
+  }
+}
+
+pre {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.125;
+  letter-spacing: 0.04em;
+  color: #907e82;
+  margin-bottom: 47px;
+}
+
+.container--text {
+  margin-top: 46px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 /*# sourceMappingURL=main.css.map */
