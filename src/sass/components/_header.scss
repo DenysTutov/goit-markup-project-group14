@@ -36,6 +36,7 @@
   }
 
   @media screen and (min-width: 1200px) {
+    margin-bottom: 75px;
   }
   z-index: 100;
 }
@@ -45,8 +46,36 @@
   height: 50px;
 }
 
-.mobile-menu__button-open {
+.main-nav__list {
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+
+.main-nav__item {
+  &:not(:last-child) {
+    margin-right: 35px;
+  }
+}
+
+.main-nav__link {
+  @include main-font(16px, 700, 21px);
+  color: $main-text-color;
+
+  &:hover,
+  &:focus {
+    color: $accent-main-color;
+  }
+}
+
+.mobile-menu__burger {
   @include button;
+
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
 }
 
 .header__button-baynow {
@@ -56,6 +85,16 @@
     @include base-button;
     color: $accent-main-color;
     background-color: $main-text-color;
+    margin-left: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 0;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $hover-inverse-button-color;
   }
 }
 
@@ -68,6 +107,15 @@
 .hero__title-thumb {
   position: relative;
   z-index: 50;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 19px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 56px;
+    padding-left: 70px;
+  }
 }
 
 .hero__title {
@@ -80,6 +128,8 @@
   }
 
   @media screen and (min-width: 1200px) {
+    @include secondary-font(38px, 400, 44px);
+    margin-bottom: 25px;
   }
 }
 
@@ -92,6 +142,7 @@
   }
 
   @media screen and (min-width: 1200px) {
+    @include secondary-font(58px, 400, 53px);
   }
 }
 
@@ -118,6 +169,15 @@
     right: 137px;
     transform: translateX(0);
   }
+
+  @media screen and (min-width: 1200px) {
+    width: 538px;
+    height: 538px;
+
+    position: absolute;
+    bottom: 75px;
+    right: 190px;
+  }
 }
 
 .hero__img {
@@ -142,11 +202,22 @@
       right: 34px;
     }
   }
+
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    bottom: 0px;
+    left: 49%;
+
+    &--girl {
+      position: absolute;
+      bottom: 0px;
+      right: 34px;
+    }
+  }
 }
 
 .hero__button-list {
   display: inline-flex;
-  margin-bottom: 19px;
 }
 
 .hero__button-item {
@@ -169,11 +240,29 @@
   &--accent {
     color: $main-text-color;
     background-color: $accent-main-color;
+
+    &:hover,
+    &:focus {
+      background-color: $hover-accent-button-color;
+    }
   }
 
   &--reverse {
     color: $accent-main-color;
     background-color: $main-text-color;
+
+    &:hover,
+    &:focus {
+      background-color: $hover-inverse-button-color;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    @include main-font(14px, 400, 18px, 0);
   }
 }
 
@@ -194,6 +283,12 @@
     background-color: $main-text-color;
     border-radius: 50%;
     transform: translateX(35px);
+
+    @media screen and (min-width: 1200px) {
+      width: 30px;
+      height: 30px;
+      transform: translateX(45px);
+    }
   }
 }
 
@@ -202,6 +297,10 @@
   color: $accent-main-color;
   position: relative;
   text-align: right;
+
+  @media screen and (min-width: 1200px) {
+    @include secondary-font(46px, 400, 53px, 0.04em);
+  }
 }
 
 .quantity-point__cafes {
@@ -224,12 +323,17 @@
 }
 
 .secondary-img__text-thumb {
-  width: 115px;
   padding-bottom: 6px;
 }
 
 .secondary-img__text {
+  width: 115px;
   @include main-font(8px, 400, 12px, 0);
   color: $main-text-color;
   margin-bottom: 7px;
+
+  @media screen and (min-width: 1200px) {
+    width: 200px;
+    @include main-font(14px, 400, 20px, 0);
+  }
 }
