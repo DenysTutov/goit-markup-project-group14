@@ -60,7 +60,12 @@
       </picture>
 
       <div class="hero__secondary-img-thumb">
-        <img class="hero__img--milk" src="./images/hero-milk-tablet.png" alt="Milk" />
+        <picture>
+          <source srcset="./images/hero-milk-tablet.png 1x" media="(max-width: 1199px)" />
+          <source srcset="./images/hero-milk-desktop.png 1x" media="(min-width: 1200px)" />
+          <img class="hero__img--milk" src="./images/hero-milk-tablet.png" alt="Milk" />
+        </picture>
+
         <div class="secondary-img__text-thumb">
           <p class="secondary-img__text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor

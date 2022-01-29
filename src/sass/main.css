@@ -114,6 +114,12 @@ a {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .header__main-nav {
+    margin-bottom: 75px;
+  }
+}
+
 .header__logo {
   width: 200px;
   height: 50px;
@@ -236,6 +242,19 @@ a {
   z-index: 50;
 }
 
+@media screen and (min-width: 768px) {
+  .hero__title-thumb {
+    margin-bottom: 19px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__title-thumb {
+    margin-bottom: 56px;
+    padding-left: 70px;
+  }
+}
+
 .hero__title {
   font-family: "Titan One", sans-serif;
   font-style: 400;
@@ -260,6 +279,19 @@ a {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-family: "Titan One", sans-serif;
+    font-style: 400;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1.15789;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
+}
+
 .hero__title-accent {
   font-family: "Titan One", sans-serif;
   font-style: 400;
@@ -278,6 +310,18 @@ a {
     font-size: 34px;
     font-weight: 400;
     line-height: 0.91176;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__title-accent {
+    font-family: "Titan One", sans-serif;
+    font-style: 400;
+    font-size: 58px;
+    font-weight: 400;
+    line-height: 0.91379;
     letter-spacing: 0.04em;
     text-transform: uppercase;
   }
@@ -312,6 +356,16 @@ a {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .hero__bg-circle {
+    width: 538px;
+    height: 538px;
+    position: absolute;
+    bottom: 75px;
+    right: 190px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .hero__img {
     position: absolute;
@@ -336,11 +390,23 @@ a {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .hero__img {
+    position: absolute;
+    bottom: 0px;
+    left: 49%;
+  }
+  .hero__img--girl {
+    position: absolute;
+    bottom: 0px;
+    right: 34px;
+  }
+}
+
 .hero__button-list {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  margin-bottom: 19px;
 }
 
 .hero__button-item:not(:last-child) {
@@ -372,9 +438,31 @@ a {
   background-color: #d41443;
 }
 
+.hero__button--accent:hover, .hero__button--accent:focus {
+  background-color: #c7133e;
+}
+
 .hero__button--reverse {
   color: #d41443;
   background-color: #ffffff;
+}
+
+.hero__button--reverse:hover, .hero__button--reverse:focus {
+  background-color: #ecebeb;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__button {
+    height: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-family: "DM Sans", sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.28571;
+    letter-spacing: 0;
+  }
 }
 
 .quantity-point__item {
@@ -396,6 +484,15 @@ a {
           transform: translateX(35px);
 }
 
+@media screen and (min-width: 1200px) {
+  .quantity-point__item::before {
+    width: 30px;
+    height: 30px;
+    -webkit-transform: translateX(45px);
+            transform: translateX(45px);
+  }
+}
+
 .quantity-point__number {
   font-family: "Titan One", sans-serif;
   font-style: 400;
@@ -407,6 +504,18 @@ a {
   color: #d41443;
   position: relative;
   text-align: right;
+}
+
+@media screen and (min-width: 1200px) {
+  .quantity-point__number {
+    font-family: "Titan One", sans-serif;
+    font-style: 400;
+    font-size: 46px;
+    font-weight: 400;
+    line-height: 1.15217;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
 }
 
 .quantity-point__cafes {
@@ -436,11 +545,11 @@ a {
 }
 
 .secondary-img__text-thumb {
-  width: 115px;
   padding-bottom: 6px;
 }
 
 .secondary-img__text {
+  width: 115px;
   font-family: "DM Sans", sans-serif;
   font-style: normal;
   font-size: 8px;
@@ -449,6 +558,18 @@ a {
   letter-spacing: 0;
   color: #ffffff;
   margin-bottom: 7px;
+}
+
+@media screen and (min-width: 1200px) {
+  .secondary-img__text {
+    width: 200px;
+    font-family: "DM Sans", sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857;
+    letter-spacing: 0;
+  }
 }
 
 .section-about {
