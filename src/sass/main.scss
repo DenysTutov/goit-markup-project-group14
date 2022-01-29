@@ -9,8 +9,9 @@
 @import './components/mixins/fonts';
 @import './components/mixins/button';
 @import './components/container';
-@import './components/contacts';
 @import './utils/visually-hidden';
 
 // Components
 @import './components/header';
+@import './components/section-about';
+@import './components/contacts';
