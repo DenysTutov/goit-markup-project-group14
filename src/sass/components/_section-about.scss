@@ -1,0 +1,51 @@
+.section-about {
+  background-color: $accent-rectangle-color;
+}
+
+.container__text {
+  @include secondary-font(18px, 400, 21px);
+  text-align: center;
+  color: $title-label-color;
+  margin-bottom: 15px;
+  padding-top: 125px;
+}
+.container__title {
+  @include secondary-font(34px, 400, 39px, 0.04em);
+  text-align: center;
+  color: $accent-main-color;
+  margin-bottom: 26px;
+}
+.container__text-black {
+  @include main-font(12px, 500, 13.5px);
+  color: $secondary-text-color;
+  margin-bottom: 47px;
+}
+.container__text-gray {
+  @include main-font(12px, 500, 13.5px);
+  color: $third-text-color;
+
+  @media screen and (max-width: 767px) {
+    height: 133px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/milk-mobile.png);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/milk-mobile@2x.png);
+    }
+  }
+}
+pre {
+  @include main-font(12px, 500, 13.5px);
+  color: $third-text-color;
+  margin-bottom: 47px;
+}
+.container--text {
+  margin-top: 46px;
+  margin-left: 50px;
+  margin-right: 50px;
+}

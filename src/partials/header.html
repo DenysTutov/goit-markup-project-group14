@@ -2,32 +2,79 @@
   <div class="container header__relative">
     <nav class="header__main-nav">
       <a href="#" class="header__logo"><img src="./images/logo-header.svg" alt="Logo" /></a>
-      <button type="button" class="mobile-menu__button-open">
-        <svg width="20" height="12" aria-label="Кнопка мобильного меню">
-          <use class="mobile-menu__menu-icon" href="./images/sprite.svg#menu-burger"></use>
-        </svg>
-      </button>
-      <button class="header__button--bay"></button>
+      <div>
+        <button type="button" class="mobile-menu__button-open">
+          <svg width="20" height="12" aria-label="Кнопка мобильного меню">
+            <use class="mobile-menu__menu-icon" href="./images/sprite.svg#menu-burger"></use>
+          </svg>
+        </button>
+        <button class="header__button-baynow">Buy now</button>
+      </div>
     </nav>
 
     <section class="hero">
-      <div class="hero__bg-circle"></div>
-      <img class="hero__img" src="./images/hero-img-mobile.png" alt="Foto icecream" />
-      <div class="hero__title-wrapper">
-        <h1 class="hero__title">
-          Ice cream <br />
-          made with <br />
-          <span class="hero__title-accent">passion</span>
-        </h1>
-        <ul class="hero__button-list">
-          <li class="hero__button-item">
-            <a href="#" class="hero__button hero__button--accent">Products</a>
+      <div class="content-thumb">
+        <div class="hero__title-thumb">
+          <h1 class="hero__title">
+            Ice cream <br />
+            made with <br />
+            <span class="hero__title-accent">passion</span>
+          </h1>
+          <ul class="hero__button-list">
+            <li class="hero__button-item">
+              <a href="#" class="hero__button hero__button--accent">Products</a>
+            </li>
+            <li class="hero__button-item">
+              <a href="#" class="hero__button hero__button--reverse">How it’s made?</a>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="quantity-point__list">
+          <li class="quantity-point__item">
+            <p class="quantity-point__number">16</p>
+            <p class="quantity-point__cafes">cafes</p>
           </li>
-          <li class="hero__button-item">
-            <a href="#" class="hero__button hero__button--reverse">How it’s made?</a>
+          <li class="quantity-point__item">
+            <p class="quantity-point__number">23</p>
+            <p class="quantity-point__cafes">food trucks</p>
           </li>
         </ul>
       </div>
+
+      <div class="hero__bg-circle"></div>
+      <picture>
+        <source srcset="./images/hero-icecream-mobile.png 1x" media="(max-width: 767px)" />
+        <source srcset="./images/hero-icecream-desktop.png 1x" media="(min-width: 1200px)" />
+        <source srcset="./images/hero-icecream-tablet.png 1x" media="(min-width: 768px)" />
+        <img class="hero__img" src="./images/hero-icecream-tablet.png" alt="Foto icecream" />
+      </picture>
+
+      <div class="hero__secondary-img-thumb">
+        <img class="hero__img--milk" src="./images/hero-milk-tablet.png" alt="Milk" />
+        <div class="secondary-img__text-thumb">
+          <p class="secondary-img__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et
+          </p>
+
+          <picture>
+            <source srcset="./images/hero-bnt-arrow-tablet.png 1x" media="(max-width: 1199px)" />
+            <source srcset="./images/hero-bnt-arrow-desktop.png 1x" media="(min-width: 1200px)" />
+            <img
+              class="secondary-img__button"
+              src="./images/hero-bnt-arrow-tablet.png"
+              alt="Arrow"
+            />
+          </picture>
+        </div>
+      </div>
+
+      <picture>
+        <source srcset="./images/hero-girl-tablet.png 1x" media="(max-width: 1199px)" />
+        <source srcset="./images/hero-girl-desktop.png 1x" media="(min-width: 1200px)" />
+        <img class="hero__img--girl" src="./images/hero-girl-tablet.png" alt="Girl with icecream" />
+      </picture>
     </section>
   </div>
 </header>
