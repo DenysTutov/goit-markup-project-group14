@@ -1,4 +1,4 @@
-.visually-hidden {
+.title-hidden {
     position: fixed;
   transform: scale(0);
 }
@@ -42,7 +42,7 @@
   }
 }
 
-.advantages {
+.advantages__list {
   @media screen and (min-width: 768px) {
     display: flex;
     &_item:not(:last-child) {
