@@ -1,55 +1,143 @@
 .section-about {
   background-color: $section-bg-color;
+
+  @media screen and (max-width: 767px) {
+    //height: 133px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0px 700px;
+    background-image: url(../images/milk-mobile.png);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/milk-mobile@2x.png);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0px 350px;
+    background-image: url(../images/milk-des.png);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/milk-des@2x.png);
+    }
+  }
 }
 
-.container__text {
+.section-about__label {
   @include secondary-font(18px, 400, 21px);
   text-align: center;
   color: $accent-secondary-color;
   margin-bottom: 15px;
   padding-top: 125px;
+
+  @media screen and (min-width: 768px) {
+    @include secondary-font(26px, 400, 30px);
+    text-align: center;
+    padding-top: 130px;
+    margin-bottom: 16px;
+  }
+  @media screen and (min-width: 1200px) {
+    @include secondary-font(30px, 400, 34px, 0.04em);
+  }
 }
 
-.container__title {
+.section-about__title {
   @include secondary-font(34px, 400, 39px, 0.04em);
   text-align: center;
   color: $accent-main-color;
   margin-bottom: 26px;
-}
 
-.container__text-black {
-  @include main-font(12px, 500, 13.5px);
-  color: $secondary-text-color;
-  margin-bottom: 47px;
-}
+  @media screen and (min-width: 768px) {
+    @include secondary-font(48px, 400, 55px);
+    text-align: center;
+    margin-bottom: 50px;
+  }
 
-.container__text-gray {
-  @include main-font(12px, 500, 13.5px);
-  color: $third-text-color;
-
-  @media screen and (max-width: 767px) {
-    height: 133px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url('../images/milk-mobile.png');
-
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url('../images/milk-mobile@2x.png');
-    }
+  @media screen and (min-width: 1200px) {
+    @include secondary-font(58px, 400, 66px, 0.06em);
+    margin-bottom: 51px;
   }
 }
 
-pre {
-  @include main-font(12px, 500, 13.5px);
-  color: $third-text-color;
-  margin-bottom: 47px;
-}
-.container--text {
+.section-about--story {
   margin-top: 46px;
-  margin-left: 50px;
-  margin-right: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 17px;
+    margin-top: 50px;
+    padding: 0;
+    //margin-bottom: 62px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 74px;
+  }
+}
+
+.section-about__text-black {
+  @include main-font(12px, 500, 19px);
+  color: $secondary-text-color;
+  margin-bottom: 34px;
+
+  @media screen and (min-width: 768px) {
+    @include main-font(14px, 500, 25px);
+    margin-bottom: 36px;
+  }
+  @media screen and (min-width: 1200px) {
+    @include main-font(16px, 500, 28px, 0.04em);
+    margin-bottom: 35px;
+  }
+}
+
+.section-about__text-gray {
+  @include main-font(12px, 500, 19px);
+  color: $third-text-color;
+  margin-bottom: 15px;
+
+  @media screen and (min-width: 768px) {
+    @include main-font(14px, 500, 25px);
+    margin-bottom: 25px;
+  }
+  @media screen and (min-width: 1200px) {
+    @include main-font(14px, 500, 27px, 0.04em);
+    margin-bottom: 35px;
+  }
+}
+
+.section-about__img {
+  display: flex;
+  align-items: flex-start;
+}
+.section-about__button {
+  @include base-button;
+  background-color: $main-text-color;
+  color: $accent-main-color;
+  @include main-font(14px, 700, 16px, 0);
+  margin-left: 0;
+
+  @media screen and (min-width: 768px) {
+    @include base-button;
+    background-color: $main-text-color;
+    color: $accent-main-color;
+    margin-left: 0;
+  }
+  @media screen and (min-width: 1200px) {
+    &:hover {
+      background-color: $hover-inverse-button-color;
+    }
+  }
+}
+.section-about--production {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 }
