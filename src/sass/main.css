@@ -205,6 +205,9 @@ a {
     letter-spacing: 0;
     color: #d41443;
     background-color: #ffffff;
+
+    margin-left: 30px;
+
   }
   .header__button-baynow::after {
     content: ' ';
@@ -549,27 +552,6 @@ a {
   margin-bottom: 7px;
 }
 
-.section-about {
-  background-color: #fff5f6;
-}
-
-@media screen and (max-width: 767px) {
-  .section-about {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 0px 700px;
-    background-image: url(../images/milk-mobile.png);
-  }
-}
-
-@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
-  .section-about {
-    background-image: url(../images/milk-mobile@2x.png);
-  }
-}
 
 @media screen and (min-width: 1200px) {
   .section-about {
@@ -583,10 +565,9 @@ a {
   }
 }
 
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .section-about {
-    background-image: url(../images/milk-des@2x.png);
-  }
+.section-about {
+  background-color: #fff5f6;
+
 }
 
 .section-about__label {
@@ -869,14 +850,14 @@ a {
     background-repeat: no-repeat;
     background-position: center;
 
-    -webkit-transform: translateY(1px);
-            transform: translateY(1px);
+    background-image: url("../images/milk-mobile.png");
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .section-about__button:hover {
-    background-color: #ecebeb;
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+  .container__text-gray {
+    background-image: url("../images/milk-mobile@2x.png");
+
   }
 }
 
