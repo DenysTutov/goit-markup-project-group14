@@ -1,4 +1,7 @@
 .contacts-section {
+
+    background-color: $background-color-light-rose;
+
     background-color: $section-bg-color;
     background-image: linear-gradient(
       to bottom,
@@ -49,20 +52,25 @@
 
     @media screen and (min-width: 768px) {
         display: flex;
+
         justify-content: center;
         margin-bottom: 81px;
     }
     @media screen and (min-width: 1200px) {
+
         margin-bottom: 86px;
     }
 }
 
+
 .contacts__list-item {
     min-width: 220px;
+
     padding: 43px 21px 43px 20px;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
     background-color: $main-text-color;
+
 
     @media screen and (max-width: 767px) {
     &:not(:last-child) {
@@ -76,12 +84,14 @@
       
         &:not(:last-child) {
             margin-right: 20px;
+
         }
     }
 
     @media screen and (min-width: 1200px) {
         min-width: 330px;
         padding: 51px 44px 62px 43px;
+
         &:not(:last-child) {
         margin-right:29px;
     }
@@ -122,18 +132,22 @@
 
     @media screen and (min-width: 768px) {
         @include main-font(14px, 500, 26px);
+
         margin-bottom: 14px;
     }
 
     @media screen and (min-width: 1200px) {
         @include main-font(16px, 500, 30px);
+
         margin-bottom: 10px;
     }
 }
 
 
 .contacts__list-info {
+
     @include main-font(12px, 500, 18px);
+
     color: $third-text-color;
 
     padding-bottom: 25px;
@@ -168,6 +182,7 @@
 }
 
 .contacts__list-time {
+
     @include main-font(12px, 500, 22px);
     color: $accent-secondary-color;
     padding-bottom: 25px;
@@ -287,3 +302,6 @@
         margin-left: 0px;
     }
 }
+
+
+
