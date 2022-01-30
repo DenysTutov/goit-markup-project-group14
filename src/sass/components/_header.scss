@@ -44,6 +44,9 @@
 .header__logo {
   width: 200px;
   height: 50px;
+
+  animation: backInLeft;
+  animation-duration: 750ms;
 }
 
 .main-nav__list {
@@ -66,6 +69,12 @@
 
   &:hover,
   &:focus {
+    color: $accent-main-color;
+  }
+
+  transition: color 250ms $cubic-timing;
+
+  &--current {
     color: $accent-main-color;
   }
 }
@@ -127,15 +136,15 @@
 }
 
 .hero__title-accent {
-  @include secondary-font(48px, 400, 47px);
+  @include secondary-font(48px, 400, 47px, 0);
   color: $accent-main-color;
 
   @media screen and (min-width: 768px) {
-    @include secondary-font(34px, 400, 31px);
+    @include secondary-font(34px, 400, 31px, 0);
   }
 
   @media screen and (min-width: 1200px) {
-    @include secondary-font(58px, 400, 53px);
+    @include secondary-font(58px, 400, 53px, 0);
   }
 }
 
@@ -151,6 +160,12 @@
     bottom: 75px;
     right: 0;
     transform: translateX(62px);
+
+    animation-name: transform-bg-circle-mobile;
+    animation-duration: 1000ms;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
   }
 
   @media screen and (min-width: 768px) {
@@ -161,15 +176,46 @@
     bottom: 46px;
     right: 137px;
     transform: translateX(0);
+
+    animation-name: transform-bg-circle;
+    animation-duration: 1000ms;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
   }
 
   @media screen and (min-width: 1200px) {
     width: 538px;
     height: 538px;
-
     position: absolute;
     bottom: 75px;
     right: 190px;
+
+    animation-name: transform-bg-circle;
+    animation-duration: 1000ms;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes transform-bg-circle-mobile {
+  0% {
+    transform: scale(0.9) translateX(62px);
+  }
+
+  100% {
+    transform: scale(1) translateX(62px);
+  }
+}
+
+@keyframes transform-bg-circle {
+  0% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
 
@@ -229,6 +275,8 @@
   padding-left: 14px;
   border-radius: 20px;
   cursor: pointer;
+
+  transition: background-color 250ms $cubic-timing;
 
   &--accent {
     color: $main-text-color;
