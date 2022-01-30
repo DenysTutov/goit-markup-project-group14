@@ -1,0 +1,84 @@
+.customers__slide {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+.customers__text-block {
+  width: 100%;
+  height: 308px;
+  background-color: #fafafa;
+  margin-top: 29px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.customers__text-block::after {
+  content: '';
+  background-image: url('../images/circles.png');
+  width: 32px;
+  height: 4px;
+  bottom: -30px;
+  position: absolute;
+}
+
+.customers__photo {
+  width: 85px;
+  height: 85px;
+}
+
+.customers__review {
+  width: 157px;
+  height: 248px;
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 260%;
+  text-align: center;
+  color: $secondary-text-color;
+  z-index: 2;
+  position: relative;
+}
+
+.customers__review::before {
+  content: '';
+  background-image: url('../images/deco.png');
+  width: 54px;
+  height: 40px;
+  position: absolute;
+  top: -15px;
+  left: 4px;
+  z-index: -1;
+}
+
+.customers__signature {
+  margin-top: 52px;
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 186%;
+  text-align: center;
+  color: #000000;
+}
+
+.customers__underline-box {
+  width: 180px;
+  height: 248px;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 30px,
+    #e1e1e1 31px
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

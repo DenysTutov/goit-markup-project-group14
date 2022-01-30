@@ -17,14 +17,24 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./sass/main.css" />
+    <link rel="stylesheet" href="./libs/slick/slick.css" />
+    <link rel="stylesheet" href="./libs/slick/slick-theme.css" />
   </head>
   <body>
     <include src="./partials/header.html"></include>
     <main>
       <include src="./partials/about.html"></include>
+      <include src="./partials/customers.html"></include>
     </main>
 
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="./slider.js"></script>
   </body>
 </html>
