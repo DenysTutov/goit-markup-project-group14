@@ -201,7 +201,7 @@ a {
     letter-spacing: 0;
     color: #d41443;
     background-color: #ffffff;
-
+    margin-left: 30px;
   }
   .header__button-baynow::after {
     content: ' ';
@@ -560,6 +560,17 @@ a {
   margin-bottom: 7px;
 }
 
+@media screen and (min-width: 1200px) {
+  .secondary-img__text {
+    width: 200px;
+    font-family: "DM Sans", sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857;
+    letter-spacing: 0;
+  }
+}
 
 .section-about {
   background-color: #fff5f6;
@@ -622,17 +633,13 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
     background-image: url("../images/milk-mobile.png");
-
   }
 }
 
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
   .container__text-gray {
-
     background-image: url("../images/milk-mobile@2x.png");
-
   }
 }
 
@@ -652,266 +659,4 @@ pre {
   margin-left: 50px;
   margin-right: 50px;
 }
-
-.section--advantages {
-  width: 100%;
-  padding-top: 39px;
-  padding-bottom: 97px;
-  background-color: #fff5f6;
-}
-
-@media screen and (min-width: 768px) {
-  .section--advantages {
-    padding-top: 66px;
-    padding-bottom: 140px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .section--advantages {
-    padding-top: 39px;
-    padding-bottom: 139px;
-  }
-}
-
-.container--advantages {
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
-@media screen and (min-width: 768px) {
-  .container--advantages {
-    padding-right: 36px;
-    padding-left: 36px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .container--advantages {
-    padding-right: 115px;
-    padding-left: 115px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .advantages {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .advantages_item:not(:last-child) {
-    margin-right: -60px;
-  }
-}
-
-.advantages__item {
-  width: 230px;
-  margin: 0;
-}
-
-@media screen and (max-width: 767px) {
-  .advantages__item:not(:last-child) {
-    margin-bottom: 38px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .advantages__item {
-    width: calc(100% / 3 - 60px);
-    margin-bottom: 0;
-  }
-  .advantages__item:not(:last-child) {
-    margin-right: 60px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .advantages__item {
-    -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    transition: -webkit-transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .advantages__item:hover, .advantages__item:focus {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-}
-
-.advantages__title {
-  margin-bottom: 15px;
-  font-family: "Titan One", sans-serif;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 1.14;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #d41443;
-}
-
-@media screen and (min-width: 768px) {
-  .advantages__title {
-    font-size: 48px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .advantages__title {
-    font-size: 58px;
-  }
-}
-
-.advantages__text {
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 1.7;
-  color: #000000;
-}
-
-@media screen and (min-width: 768px) {
-  .advantages__text {
-    font-size: 14px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .advantages__text {
-    font-size: 16px;
-    line-height: 1.8;
-    letter-spacing: 0.02em;
-  }
-}
-
-.advantages__title--icemilk::before {
-  content: ' ';
-  display: block;
-  margin-bottom: 16px;
-  max-width: 33px;
-  height: 50px;
-  background-image: url(../images/advantages/icemilk-mobile.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-  .advantages__title--icemilk::before {
-    background-image: url(../images/advantages/icemilk-mobile@2x.png);
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .advantages__title--icemilk::before {
-    margin-bottom: 36px;
-    background-image: url(../images/advantages/icemilk-tablet.png);
-  }
-}
-
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
-  .advantages__title--icefruits::before {
-    background-image: url(../images/advantages/icemilk-tablet@2x.png);
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .advantages__title--icemilk::before {
-    margin-bottom: 40px;
-    background-image: url(../images/advantages/icemilk-desktop.png);
-  }
-}
-
-@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
-  .advantages__title--icefruits::before {
-    background-image: url(../images/advantages/icemilk-desktop@2x.png);
-  }
-}
-
-.advantages__title--icefruits::before {
-  content: ' ';
-  display: block;
-  margin-bottom: 16px;
-  max-width: 50px;
-  height: 50px;
-  background-image: url(../images/advantages/icefruits-mobile.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-  .advantages__title--icefruits::before {
-    background-image: url(../images/advantages/icefruits-mobile@2x.png);
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .advantages__title--icefruits::before {
-    margin-bottom: 36px;
-    background-image: url(../images/advantages/icefruits-tablet.png);
-  }
-}
-
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
-  .advantages__title--icefruits::before {
-    background-image: url(../images/advantages/icefruits-tablet@2x.png);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .advantages__title--icefruits::before {
-    margin-bottom: 40px;
-    background-image: url(../images/advantages/icefruits-desktop.png);
-  }
-}
-
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .advantages__title--icefruits::before {
-    background-image: url(../images/advantages/icefruits-desktop@2x.png);
-  }
-}
-
-.advantages__title--icecream::before {
-  content: ' ';
-  display: block;
-  margin-bottom: 16px;
-  max-width: 44px;
-  height: 50px;
-  background-image: url(../images/advantages/icecream-mobile.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-  .advantages__title--icecream::before {
-    background-image: url(../images/advantages/icecream-mobile@2x.png);
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .advantages__title--icecream::before {
-    margin-bottom: 36px;
-    background-image: url(../images/advantages/icecream-tablet.png);
-  }
-}
-
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
-  .advantages__title--icecream::before {
-    background-image: url(../images/advantages/icecream-tablet@2x.png);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .advantages__title--icecream::before {
-    margin-bottom: 40px;
-    background-image: url(../images/advantages/icecream-desktop.png);
-  }
-}
-
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .advantages__title--icecream::before {
-    background-image: url(../images/advantages/icecream-desktop@2x.png);
-  }
-}
-
 /*# sourceMappingURL=main.css.map */
