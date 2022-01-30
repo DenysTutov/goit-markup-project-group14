@@ -193,15 +193,18 @@ a {
     padding-left: 37px;
     padding-right: 37px;
     border-radius: 22px;
+    color: #d41443;
+    background-color: #ffffff;
     font-family: "DM Sans", sans-serif;
     font-style: normal;
     font-size: 16px;
     font-weight: 700;
     line-height: 1.3125;
     letter-spacing: 0;
-    color: #d41443;
-    background-color: #ffffff;
     margin-left: 30px;
+  }
+  .header__button-baynow:hover, .header__button-baynow:focus {
+    background-color: #ecebeb;
   }
   .header__button-baynow::after {
     content: ' ';
@@ -209,7 +212,7 @@ a {
     width: 6px;
     height: 10px;
     margin-left: 12px;
-    background-image: url("../images/arrow-in-button.svg");
+    background-image: url("../images/arrow-in-main-button.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -222,10 +225,6 @@ a {
   .header__button-baynow {
     margin-left: 0;
   }
-}
-
-.header__button-baynow:hover, .header__button-baynow:focus {
-  background-color: #ecebeb;
 }
 
 .content-thumb {
