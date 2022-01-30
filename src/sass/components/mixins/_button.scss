@@ -19,6 +19,8 @@
   color: $accent-main-color;
   background-color: $main-text-color;
 
+  transition: background-color 250ms $cubic-timing;
+
   &:hover,
   &:focus {
     background-color: $hover-inverse-button-color;
@@ -52,6 +54,8 @@
 
   color: $main-text-color;
   background-color: $accent-main-color;
+
+  transition: background-color 250ms $cubic-timing;
 
   &:hover,
   &:focus {
