@@ -1,3 +1,8 @@
+.visually-hidden {
+    position: fixed;
+  transform: scale(0);
+}
+
 .section--advantages {
   width: 100%;
   padding-top: 39px;
@@ -14,6 +19,13 @@
     padding-bottom: 139px;
   }
 }
+
+// .section {
+//   padding: 60px 0px;
+//   @media screen and (min-width: 1200px) {
+//   padding: 94px 0px;
+//   }
+// }
 
 .container--advantages {
   padding-right: 20px;
