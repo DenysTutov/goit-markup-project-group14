@@ -29,7 +29,7 @@
     }
   }
 }
-.container__text {
+.section-about__label {
   @include secondary-font(18px, 400, 21px);
   text-align: center;
   color: $accent-secondary-color;
@@ -46,7 +46,7 @@
     @include secondary-font(30px, 400, 34px, 0.04em);
   }
 }
-.container__title {
+.section-about__title {
   @include secondary-font(34px, 400, 39px, 0.04em);
   text-align: center;
   color: $accent-main-color;
@@ -64,7 +64,7 @@
   }
 }
 
-.container--text {
+.section-about--story {
   margin-top: 46px;
   padding-left: 30px;
   padding-right: 30px;
@@ -80,7 +80,7 @@
     margin-left: 74px;
   }
 }
-.container__text-black {
+.section-about__text-black {
   @include main-font(12px, 500, 19px);
   color: $secondary-text-color;
   margin-bottom: 34px;
@@ -94,7 +94,7 @@
     margin-bottom: 35px;
   }
 }
-.container__text-gray {
+.section-about__text-gray {
   @include main-font(12px, 500, 19px);
   color: $third-text-color;
   margin-bottom: 15px;
@@ -108,26 +108,12 @@
     margin-bottom: 35px;
   }
 }
-p {
-  @include main-font(12px, 500, 19px);
-  color: $third-text-color;
-  margin-bottom: 47px;
 
-  @media screen and (min-width: 768px) {
-    @include main-font(14px, 500, 25px);
-    margin-bottom: 62px;
-  }
-  @media screen and (min-width: 1200px) {
-    @include main-font(14px, 500, 27px, 0.04em);
-    margin-bottom: 45px;
-  }
-}
-
-.container__img {
+.section-about__img {
   display: flex;
   align-items: flex-start;
 }
-.container__button {
+.section-about__button {
   @include base-button;
   background-color: $main-text-color;
   color: $accent-main-color;
@@ -146,7 +132,7 @@ p {
     }
   }
 }
-.container--bbb {
+.section-about--production {
   @media screen and (min-width: 768px) {
     display: flex;
   }
