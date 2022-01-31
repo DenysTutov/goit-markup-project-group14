@@ -16,6 +16,16 @@
   padding-right: 37px;
   border-radius: 22px;
 
+  color: $accent-main-color;
+  background-color: $main-text-color;
+
+  transition: background-color 250ms $cubic-timing;
+
+  &:hover,
+  &:focus {
+    background-color: $hover-inverse-button-color;
+  }
+
   @include main-font(16px, 700, 21px, 0);
 
   &::after {
@@ -25,7 +35,43 @@
     height: 10px;
     margin-left: 12px;
 
-    background-image: url('../images/arrow-in-button.svg');
+    background-image: url('../images/arrow-in-main-button.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateY(1px);
+  }
+}
+
+@mixin secondary-button {
+  @include button;
+  align-items: center;
+
+  height: 44px;
+  padding-left: 37px;
+  padding-right: 37px;
+  border-radius: 22px;
+
+  color: $main-text-color;
+  background-color: $accent-main-color;
+
+  transition: background-color 250ms $cubic-timing;
+
+  &:hover,
+  &:focus {
+    background-color: $hover-accent-button-color;
+  }
+
+  @include main-font(16px, 700, 21px, 0);
+
+  &::after {
+    content: ' ';
+    display: block;
+    width: 6px;
+    height: 10px;
+    margin-left: 12px;
+
+    background-image: url('../images/arrow-in-secondary-button.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
