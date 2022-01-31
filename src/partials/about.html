@@ -1,13 +1,13 @@
-<section class="section-about">
-    <div class="container">
+<section class="section-about" id="section-about">
+    <div class="container container-mm">
     <p class="section-about__label">TRADITION AND LOVE</p>
     <h2 class="section-about__title"> HOW IT’S MADE</h2>
     <div class="section-about--production">
-    <picture class="section-about__img">
+    <picture>
     <source media="(min-width: 1200px)" srcset="./images/cow-des.png 1x, ./images/cow-des@2x.png" />
     <source media="(min-width: 768px)" srcset="./images/cow-tab.png 1x, ./images/cow-tab@2x.png" />
     <source media="(min-width: 320px)" srcset="./images/cow-mobile.png 1x, ./images/cow-mobile@2x.png" /> 
-    <img src="./images/cow-mobile.png" alt="cow" />
+    <img class="section-about__img" src="./images/cow-mobile.png" alt="cow" />
     </picture>
     <div class="section-about--story">
     <p class="section-about__text-black">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas eros.
@@ -17,9 +17,33 @@
     Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt.</p>
     <p class="section-about__text-gray">Aliquam erat volutpat. Aenean accumsan.</p>
 
-<button type="button" class="section-about__button">Read more</button>
+<button type="button" data-modal-open class="section-about__button">Read more</button>
+
+<div class="backdrop is-hidden" data-modal>
+    <div class="section-about__modal">
+    <h3 class="section-about__paragraph">Interesting fact</h3>
+    <p class="section-about__text-black">The first ice cream recipe was opened and declassified for widespread publication in the XI century BC
+        in the book "Shi Jing" in China more than 4000 years ago. Its essence was that fresh snow or ice mixed with slices of
+        lemons, oranges and pomegranate seeds.</p>
+    <h3 class="section-about__paragraph">What is ice cream made of?</h3>
+    <p class="section-about__text-black">Ice cream production requires several available and common components. The main ingredient is milk, which can be in
+        liquid or powder form. Depending on the variety and price of the delicacy, one or both are used together. To give ice
+        cream additional qualities and properties, sweeteners, dyes, stabilizers and fillings are added to its composition. In
+        each variety they are different and combined.</p>
+    <button type="button" data-modal-close class="section-about__close">
+        <svg class="section-about__icon">
+            <use href="./images/sprite.svg#menu-close"></use>
+        </svg>
+    </button>
+    </div>
+</div>
+
+
+
 </div>
 </div>
 
 </div>
 </section>
+
+<script src="./js/modal.js"></script>
