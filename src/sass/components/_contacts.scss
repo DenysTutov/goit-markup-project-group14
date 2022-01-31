@@ -335,80 +335,31 @@
     }
 
     @media screen and (min-width: 768px) {
-        min-width: 768px;
+        min-width: 700px;
         background-repeat: no-repeat;
         background-size: center;
         padding-left: 50px;
         margin-left: auto;
         margin-right: auto;
         // min-width: 768px;
-         background-image: url("../images/ice-cream-modal-tablet.png");
+        //  background-image: url("../images/ice-cream-modal-mobile.png");
        
-        background-position: bottom 10px right 10px;
+        // background-position: bottom 10px right 10px;
 
-        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        background-image: url("../images/ice-cream-modal-tablet@2x.png");
-        }
+        // @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        // background-image: url("../images/ice-cream-modal-mobile@2x.png");
+        // }
     }
-
-    @media screen and (min-width: 1200px) {
-        min-width: 850px;
-        background-image: url("../images/ice-cream-modal-tablet.png");
-        // background-size: contain;
-        background-position: bottom 0px right 0px;
-
-        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        background-image: url("../images/ice-cream-modal-tablet@2x.png");
-        }
-    }
-
-    // background-image: url("../images/ice-cream-modal-mobile.png");
-    // background-repeat: no-repeat;
-    // 
-    // 
-    // animation-name: ice-cream-modal;
-    // animation-duration: 5s;
-    // animation-timing-function: linear;
-    // animation-iteration-count: infinite;
-
-    // @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    //         background-image: url("../images/ice-cream-modal-mobile@2x.png");
-    //         }
-    // @keyframes ice-cream-modal {
-    //     0% {
-    //       transform: rotate(0deg);
-    //     }
-      
-    //     100% {
-    //       transform: rotate(360deg);
-    //     }
-    //   }
-  
-    // @media screen and (min-width: 768px) {
-    //     background-repeat: no-repeat;
-    //     background-size: center;
-    //     padding-left: 50px;
-    //     margin-left: auto;
-    //     margin-right: auto;
-    //     // min-width: 768px;
-    //     background-image: url("../images/ice-cream-modal-tablet.png");
-    //     background-position: bottom 10px right 10px;
-
-    //     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    //     background-image: url("../images/ice-cream-modal-tablet@2x.png");
-    //     }
-    // }
 
     // @media screen and (min-width: 1200px) {
-    //     width: 100%;
-    //     background-image: url("../images/ice-cream-modal-tablet.png");
-    //     background-size: contain;
-    //     background-position: bottom 0px right 0px;
-     
+    //     // min-width: px;
+    // //     background-image: url("../images/ice-cream-modal-mobile.png");
+    // //     // background-size: contain;
+    // //     background-position: bottom 0px right 0px;
 
-    //     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    //     background-image: url("../images/ice-cream-modal-tablet@2x.png");
-    //     }
+    // //     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    // //     background-image: url("../images/ice-cream-modal-tablet@2x.png");
+    // //     }
     // }
 
     .backdrop--is-hidden & {
@@ -416,6 +367,11 @@
     }
   }
 
+//   .contacts-modal__map--tablet {
+//     @media screen and (max-width: 480px) {
+//         display: none;
+//   }
+// }
 //   .contacts-modal__icecream-box {
 //       width: 100px;
 //       height: 100px;
@@ -457,6 +413,18 @@
      display: flex;
      align-items: center;
      justify-content: center;
+
+     &--tablet {
+        @media screen and (max-width: 480px) {
+            display: none;
+      }
+    }
+
+    &--mobile {
+        @media screen and (min-width: 480px) {
+            display: none;
+      }
+    }
  }
 
  .modal__location-city {
