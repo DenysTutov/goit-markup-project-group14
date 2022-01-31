@@ -19,7 +19,10 @@
         rgba(255, 245, 246, 1) 21%,
     );
     }
-    
+    @media screen and (min-width: 1200px) {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
         // background-position: center;
         // background-size: cover;
     
@@ -35,16 +38,15 @@
         padding-left: 70px;
         padding-right: 70px;
         width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+        // margin-left: auto;
+        // margin-right: auto;
         background-repeat: no-repeat;
-        background-size: contain;
-        background-position: top 90px left 0px;
-        background-image:
-        url("../images/spots.png");
+        background-size: center;
+        background-position: top 105px left -350px;
+        background-image: url("../images/spots-full.png");
 
         @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-            background-image: url("../images/spots@2x.png");
+            background-image: url("../images/spots-full@2x.png");
             }
     }
 }
@@ -285,15 +287,6 @@
     padding-left: 10px;
     padding-right: 10px;
     justify-content: center;
-    // color: $accent-main-color;
-    // background: $main-text-color;
-    // border-radius: 22px;
-    // border: none;
-
-    // width: 161px;
-    // height: 44px;
-    // margin-left: auto;
-    // margin-right: auto;
 
     &::after {
         content: ' ';
@@ -301,10 +294,6 @@
         width: 6px;
         height: 10px;
     
-    //     background-image: url('../images/arrow-in-main-button.svg');
-    //     background-size: contain;
-    //     background-repeat: no-repeat;
-    //     background-position: center;
         transform: translateY(2px);
       }
  
@@ -331,8 +320,10 @@
     background-color: rgba(255, 234, 254, 0.2);
     backdrop-filter: blur(15px);
 
-    opacity: 2;
+    opacity: 1;
     transition: opacity 250ms $cubic-timing;
+
+    z-index: 300;
   }
 
   .backdrop--is-hidden {
@@ -344,7 +335,7 @@
     position: absolute;
     min-width: 320px;
     height: 581px;
-    padding: 15px 30px 15px 50px;
+    padding: 15px 30px 15px 30px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
@@ -354,24 +345,61 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    z-index: 300;
-
-    background-image: url("../images/ice-cream-modal.png");
+    background-image: url("../images/milk-mobile.png");
     background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom 0px right 0px;
+    
+
+    // background-image: url("../images/ice-cream-modal-mobile.png");
+    // background-repeat: no-repeat;
+    // 
+    // 
+    // animation-name: ice-cream-modal;
+    // animation-duration: 5s;
+    // animation-timing-function: linear;
+    // animation-iteration-count: infinite;
+
+    // @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    //         background-image: url("../images/ice-cream-modal-mobile@2x.png");
+    //         }
+    // @keyframes ice-cream-modal {
+    //     0% {
+    //       transform: rotate(0deg);
+    //     }
+      
+    //     100% {
+    //       transform: rotate(360deg);
+    //     }
+    //   }
+  
+    @media screen and (min-width: 768px) {
+        background-repeat: no-repeat;
         background-size: center;
+        padding-left: 50px;
+        min-width: 768px;
+        background-image: url("../images/ice-cream-modal-tablet.png");
         background-position: bottom 10px right 10px;
 
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        background-image: url("../images/ice-cream-modal@2x.png");
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url("../images/ice-cream-modal-tablet@2x.png");
         }
-  
+    }
+
+    @media screen and (min-width: 1200px) {
+        min-width: 768px;
+        background-image: url("../images/ice-cream-modal-tablet.png");
+        background-size: contain;
+        background-position: bottom 10px right 10px;
+     
+
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url("../images/ice-cream-modal-tablet@2x.png");
+        }
+    }
 
     .backdrop--is-hidden & {
       transform: translate(-50%, -50%) scale(1.1);
-    }
-
-    @media screen and (min-width: 768px) {
-        min-width: 768px;
     }
   }
 
@@ -386,10 +414,14 @@
     border-radius: 50%;
     padding: 0px;
     fill: $main-text-color;
-
     cursor: pointer;
-    
+
+    &:hover,
+    &:focus {
+     background: $accent-main-color;
+     transition: background-color 250ms $cubic-timing;
   }
+}
 
   .contacts-modal__icon-close {
     position: absolute;
@@ -397,21 +429,25 @@
     right: 7px;
     transition: background-color 250ms $cubic-timing;
 
-    .contacts-modal__button-closel:hover &,
-    .contacts-modal__button-closel:focus & {
-      fill: $accent-main-color;
-
-      transition: background-color 250ms $cubic-timing;
+    
     }
-  }
- .contacts-modal__chicago-map {
-     width: auto;
-     height: 250px;
+  
+
+ .contacts-modal__map {
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+    
  }
 
  .modal__location-city {
- @include secondary-font(12px, 500, 22px);
- display: block;
- color: $accent-main-color;
-margin-bottom: 10px;
+    @include secondary-font(12px, 500, 22px);
+    display: flex;
+    justify-content: center;
+    color: $accent-main-color;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
  }
