@@ -5,6 +5,18 @@
   align-items: center;
   justify-content: center;
   padding-top: 80px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 121px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 123px;
+    padding-left: 92px;
+    padding-right: 92px;
+  }
 }
 
 .customers__text-block {
@@ -17,6 +29,20 @@
   align-items: center;
   justify-content: center;
   position: relative;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 19px;
+    height: 164px;
+    padding-top: 47px;
+    padding-bottom: 34px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 15px;
+    height: 138px;
+    padding-top: 47px;
+    padding-bottom: 28px;
+  }
 }
 
 .customers__text-block::after {
@@ -26,6 +52,13 @@
   height: 4px;
   bottom: -30px;
   position: absolute;
+
+  @media screen and (min-width: 768px) {
+    bottom: -24px;
+  }
+  @media screen and (min-width: 1200px) {
+    bottom: -15px;
+  }
 }
 
 .customers__photo {
@@ -37,7 +70,6 @@
   width: 157px;
   height: 248px;
   font-family: $main-font;
-  font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 260%;
@@ -45,6 +77,21 @@
   color: $secondary-text-color;
   z-index: 2;
   position: relative;
+
+  @media screen and (min-width: 768px) {
+    width: 460px;
+    height: 93px;
+    font-size: 14px;
+    line-height: 216%;
+    letter-spacing: 0.04em;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 750px;
+    height: 52px;
+    font-size: 16px;
+    line-height: 186%;
+  }
 }
 
 .customers__review::before {
@@ -56,17 +103,33 @@
   top: -15px;
   left: 4px;
   z-index: -1;
+
+  @media screen and (min-width: 768px) {
+    top: -17px;
+    left: -40px;
+  }
+
+  @media screen and (min-width: 768px) {
+    top: -15px;
+    left: -37px;
+  }
 }
 
 .customers__signature {
   margin-top: 52px;
   font-family: $main-font;
-  font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 186%;
   text-align: center;
-  color: #000000;
+  color: $secondary-text-color;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 42px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-top: 34px;
+  }
 }
 
 .customers__underline-box {
@@ -81,4 +144,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    width: 500px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 813px;
+  }
 }
