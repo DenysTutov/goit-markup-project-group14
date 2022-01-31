@@ -19,7 +19,10 @@
         rgba(255, 245, 246, 1) 21%,
     );
     }
-    
+    @media screen and (min-width: 1200px) {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
         // background-position: center;
         // background-size: cover;
     
@@ -35,16 +38,15 @@
         padding-left: 70px;
         padding-right: 70px;
         width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+        // margin-left: auto;
+        // margin-right: auto;
         background-repeat: no-repeat;
-        background-size: contain;
-        background-position: top 90px left 0px;
-        background-image:
-        url("../images/spots.png");
+        background-size: center;
+        background-position: top 105px left -350px;
+        background-image: url("../images/spots-full.png");
 
         @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-            background-image: url("../images/spots@2x.png");
+            background-image: url("../images/spots-full@2x.png");
             }
     }
 }
@@ -69,7 +71,6 @@
 
 .contacts__list-item {
     min-width: 220px;
-
     padding: 43px 21px 43px 20px;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
@@ -183,7 +184,6 @@
 }
 
 .contacts__list-time {
-
     @include main-font(12px, 500, 22px);
     color: $accent-secondary-color;
     padding-bottom: 25px;
@@ -287,15 +287,6 @@
     padding-left: 10px;
     padding-right: 10px;
     justify-content: center;
-    // color: $accent-main-color;
-    // background: $main-text-color;
-    // border-radius: 22px;
-    // border: none;
-
-    // width: 161px;
-    // height: 44px;
-    // margin-left: auto;
-    // margin-right: auto;
 
     &::after {
         content: ' ';
@@ -303,10 +294,6 @@
         width: 6px;
         height: 10px;
     
-    //     background-image: url('../images/arrow-in-main-button.svg');
-    //     background-size: contain;
-    //     background-repeat: no-repeat;
-    //     background-position: center;
         transform: translateY(2px);
       }
  
@@ -330,10 +317,13 @@
     left: 0px;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 234, 254, 0.2);
+    backdrop-filter: blur(15px);
 
     opacity: 1;
     transition: opacity 250ms $cubic-timing;
+
+    z-index: 300;
   }
 
   .backdrop--is-hidden {
@@ -341,202 +331,123 @@
     pointer-events: none;
   }
 
-  .modal {
+  .contacts-modal {
     position: absolute;
-    width: 528px;
+    min-width: 320px;
     height: 581px;
-    padding: 40px 39px 40px 41px;
+    padding: 15px 30px 15px 30px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-
     transition: transform 250ms $cubic-timing;
 
     background-color: $main-text-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    background-image: url("../images/milk-mobile.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom 0px right 0px;
+    
+
+    // background-image: url("../images/ice-cream-modal-mobile.png");
+    // background-repeat: no-repeat;
+    // 
+    // 
+    // animation-name: ice-cream-modal;
+    // animation-duration: 5s;
+    // animation-timing-function: linear;
+    // animation-iteration-count: infinite;
+
+    // @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    //         background-image: url("../images/ice-cream-modal-mobile@2x.png");
+    //         }
+    // @keyframes ice-cream-modal {
+    //     0% {
+    //       transform: rotate(0deg);
+    //     }
+      
+    //     100% {
+    //       transform: rotate(360deg);
+    //     }
+    //   }
+  
+    @media screen and (min-width: 768px) {
+        background-repeat: no-repeat;
+        background-size: center;
+        padding-left: 50px;
+        min-width: 768px;
+        background-image: url("../images/ice-cream-modal-tablet.png");
+        background-position: bottom 10px right 10px;
+
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url("../images/ice-cream-modal-tablet@2x.png");
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        min-width: 768px;
+        background-image: url("../images/ice-cream-modal-tablet.png");
+        background-size: contain;
+        background-position: bottom 10px right 10px;
+     
+
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url("../images/ice-cream-modal-tablet@2x.png");
+        }
+    }
 
     .backdrop--is-hidden & {
       transform: translate(-50%, -50%) scale(1.1);
     }
   }
 
-  .close-modal {
+  .contacts-modal__button-close {
     position: absolute;
-    top: 8px;
-    right: 8px;
+    top: 15px;
+    right: 15px;
     width: 30px;
     height: 30px;
-    background: $main-text-color;
+    background: $accent-secondary-color;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     padding: 0px;
-
+    fill: $main-text-color;
     cursor: pointer;
-  }
 
-  .close-modal__icon {
+    &:hover,
+    &:focus {
+     background: $accent-main-color;
+     transition: background-color 250ms $cubic-timing;
+  }
+}
+
+  .contacts-modal__icon-close {
     position: absolute;
     top: 8px;
-    right: 8px;
-    fill: $secondary-text-color;
-
+    right: 7px;
     transition: background-color 250ms $cubic-timing;
 
-    .close-modal:hover & {
-      fill: $accent-secondary-color;
-
-      transition: background-color 250ms $cubic-timing;
+    
     }
-  }
+  
 
+ .contacts-modal__map {
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+    
+ }
 
-  .modal-form__box {
-    display: block;
-    position: relative;
-    width: 100%;
-    margin-bottom: 28px;
-  }
-
-  .modal-form__input-icon {
-    position: absolute;
-    top: 50%;
-    left: 12px;
-    transform: translateY(-50%);
-
-    .modal-form__input:hover + &,
-    .modal-form__input:focus + & {
-      fill: $accent-secondary-color;
-
-      transition: background-color 250ms $cubic-timing;
-    }
-  }
-
-//   .modal-form__comment-box {
-//     display: flex;
-//     flex-direction: column;
-//     position: relative;
-//     width: 100%;
-//     margin-bottom: 20px;
-//   }
-
-//   .modal-form__textarea {
-//     width: 100%;
-//     padding: 12px 16px;
-//     border: 1px solid rgba(33, 33, 33, 0.2);
-
-//     cursor: pointer;
-//     resize: none;
-//     border-radius: 4px;
-
-//     &:hover,
-//     &:focus {
-//       border-color: $accent-color;
-//       outline-color: $accent-color;
-//       outline: 1px;
-//       font-size: 16px;
-
-//       transition: background-color 250ms $timing-function;
-//     }
-//   }
-
-//   ::placeholder {
-//     font-size: 12px;
-//     line-height: 1.16;
-//     letter-spacing: 0.01em;
-//     color: rgba(117, 117, 117, 0.5);
-//   }
-
-//   .checkbox {
-//     display: flex;
-//     align-items: center;
-//     width: 100%;
-//     margin-bottom: 30px;
-
-//     &__input {
-//       position: absolute;
-//       width: 1px;
-//       height: 1px;
-//       margin: -1px;
-//       border: 0px;
-//       padding: 0px;
-//       clip: rect(0 0 0 0);
-//       overflow: hidden;
-//     }
-//   }
-//   .checkbox__contract {
-//     font-size: 14px;
-//     line-height: 1.71;
-//     letter-spacing: 0.03em;
-//     color: $accent-color;
-//     text-decoration-skip-ink: none;
-//   }
-
-//   .checkbox__icon {
-//     position: relative;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     width: 16px;
-//     height: 15px;
-//     border: 2px solid $title-text-color;
-//     border-radius: 2px;
-//     margin-left: 13px;
-//     margin-right: 8px;
-
-//     .checkbox__input:checked + & {
-//       background-color: $accent-color;
-//       border-color: $accent-color;
-//       background-size: contain;
-//       background-origin: border-box;
-//     }
-//   }
-
-//   .checkbox__icon-check {
-//     position: absolute;
-//     display: block;
-//   }
-
-//   .checkbox__label {
-//     font-weight: normal;
-//     font-size: 14px;
-//     line-height: 1.71;
-//     letter-spacing: 0.03em;
-//     color: $primary-text-color;
-//   }
-
-//   .modal-form__submit {
-//     position: absolute;
-//     left: 50%;
-//     bottom: 40px;
-//     transform: translate(-50%);
-
-//     padding: 10px 55px 10px 56px;
-//     border: 0px;
-//     border-radius: 4px;
-//     font-weight: bold;
-//     font-size: 16px;
-//     line-height: 1.87;
-//     letter-spacing: 0.06em;
-//     color: $primary-white-color;
-
-//     background-color: $accent-color;
-//     width: 200px;
-//     height: 50px;
-//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-//     cursor: pointer;
-
-//     transition: background-color 250ms $timing-function;
-
-//     &:hover,
-//     &:focus {
-//       background-color: $active-bnt-color;
-
-//       transition: background-color 250ms $timing-function;
-//     }
-//   }
-
-
-
-
+ .modal__location-city {
+    @include secondary-font(12px, 500, 22px);
+    display: flex;
+    justify-content: center;
+    color: $accent-main-color;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+ }
