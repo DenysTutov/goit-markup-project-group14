@@ -1,6 +1,7 @@
 .section-about {
   background-color: $section-bg-color;
-
+}
+.container-mm {
   @media screen and (max-width: 767px) {
     //height: 133px;
     width: 100%;
@@ -8,7 +9,7 @@
     margin-right: auto;
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: 0px 700px;
+    background-position: 90% 90%;
     background-image: url(../images/milk-mobile.png);
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -21,7 +22,7 @@
     margin-right: auto;
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: 0px 350px;
+    background-position: 100% 120%;
     background-image: url(../images/milk-des.png);
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -116,13 +117,32 @@
 .section-about__img {
   display: flex;
   align-items: flex-start;
+  justify-content: center;
+  animation: rotateY 3000ms infinite alternate backwards ease-in-out 1000ms;
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    padding-left: 0px;
+  }
 }
+
+@keyframes rotateY {
+  0% {
+    transform: perspective(1000px) rotateY(60deg);
+  }
+
+  100% {
+    transform: perspective(1000px) rotateY(-60deg);
+  }
+}
+
 .section-about__button {
   @include base-button;
   background-color: $main-text-color;
   color: $accent-main-color;
   @include main-font(14px, 700, 16px, 0);
   margin-left: 0;
+  animation: animate125 3000ms infinite 1000ms;
 
   @media screen and (min-width: 768px) {
     @include base-button;
@@ -140,4 +160,101 @@
   @media screen and (min-width: 768px) {
     display: flex;
   }
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(15px);
+  z-index: 100;
+  opacity: 1;
+  overflow-y: scroll;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .section-about__modal {
+  transform: translate(-50%, -50%) scale(1.1);
+  opacity: 0;
+}
+.section-about__modal {
+  position: relative;
+  background-color: $main-text-color;
+  opacity: 1;
+  text-align: left;
+  padding-top: 0;
+
+  @media screen and (max-width: 1199px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 100%;
+    max-width: 450px;
+    height: 609px;
+    padding: 40px;
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+      0px 2px 1px rgb(0 0 0 / 20%);
+    border-radius: 4px;
+  }
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    //width: 100%;
+    min-width: 521px;
+    min-height: 581px;
+    padding: 40px;
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+      0px 2px 1px rgb(0 0 0 / 20%);
+    border-radius: 4px;
+  }
+}
+
+.section-about__paragraph {
+  @include secondary-font(18px, 400, 21px);
+  text-align: center;
+  color: $accent-secondary-color;
+  margin-bottom: 15px;
+}
+
+.section-about__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  background: $accent-main-color;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  padding: 0px;
+  fill: $main-text-color;
+  cursor: pointer;
+}
+.section-about__icon {
+  position: absolute;
+  top: 8px;
+  right: 7px;
+  width: 14px;
+  height: 14px;
+
+  transition: background-color 250ms $cubic-timing;
+  justify-content: center;
+  align-items: center;
+  fill: $secondary-text-color;
+}
+.section-about__close:hover .section-about__close,
+.section-about__close:focus .section-about__close {
+  background-color: $accent-bg-color-first;
+  transition: background-color 250ms $cubic-timing;
 }

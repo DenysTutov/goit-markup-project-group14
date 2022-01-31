@@ -1,0 +1,105 @@
+// #gallery {
+//   background-image: linear-gradient(to bottom, #fff5f6 38%, #ffffff 38%);
+// }
+// .gallery {
+//   &__block {
+//     position: relative;
+//     max-width: 440px;
+//     height: 122px;
+//     margin-top: 97px;
+//   }
+//   &__list {
+//     display: flex;
+//     flex-wrap: wrap;
+//     max-width: 440px;
+//     margin-left: auto;
+//     margin-right: auto;
+//   }
+//   &__img {
+//     position: absolute;
+//     @media screen and (min-width: 320px) {
+//       border-radius: 5px;
+//     }
+//   }
+// }
+
+// @media screen and (min-width: 320px) {
+//   .gallery__img {
+//     &.first {
+//       top: 40px;
+//     }
+//     &.second {
+//       top: 25px;
+//       left: 41px;
+//     }
+//     &.third {
+//       top: 0;
+//       left: 82px;
+//     }
+//     &.fourth {
+//       top: 28px;
+//       left: 165px;
+//     }
+//     &.fifth {
+//       top: 15px;
+//       left: 206px;
+//     }
+//     &.sixth {
+//       top: 44px;
+//       left: 248px;
+//     }
+//     &.seventh {
+//       top: 66px;
+//       left: 41px;
+//     }
+//     &.eighth {
+//       top: 83px;
+//       left: 83px;
+//     }
+//     &.ninth {
+//       top: 70px;
+//       left: 165px;
+//     }
+//     &.tenth {
+//       top: 57px;
+//       left: 207px;
+//     }
+//   }
+// }
+#gallery {
+  @media screen and (max-width: 767px) {
+    background-image: linear-gradient(to bottom, #fff5f6 67%, #ffffff 68%);
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    background-image: linear-gradient(to bottom, #fff5f6 61%, #ffffff 62%);
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(to bottom, #fff5f6 54%, #ffffff 55%);
+  }
+}
+.gallery {
+  @media screen and (max-width: 767px) {
+    padding-top: 97px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-top: 140px;
+    max-width: 621px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 139px;
+    max-width: 1011px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &__picture {
+    display: block;
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
