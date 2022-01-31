@@ -1,17 +1,62 @@
 <header class="header">
   <div class="container header__relative">
+    <div class="hero__bg-circle"></div>
+    <picture>
+      <source
+        srcset="./images/hero-icecream-mobile.png 1x, ./images/hero-icecream-mobile@2x.png 2x"
+        media="(max-width: 767px)"
+      />
+      <source
+        srcset="./images/hero-icecream-desktop.png 1x, ./images/hero-icecream-desktop@2x.png 2x"
+        media="(min-width: 1200px)"
+      />
+      <source
+        srcset="./images/hero-icecream-tablet.png 1x, ./images/hero-icecream-tablet@2x.png 2x"
+        media="(min-width: 768px)"
+      />
+      <img class="hero__img" src="./images/hero-icecream-tablet.png" alt="Photo icecream" />
+    </picture>
+
     <nav class="header__main-nav">
-      <a href="#" class="header__logo"><img src="./images/logo-header.svg" alt="Logo" /></a>
+      <a href="#" class="header__logo animate__animated animate__backInLeft">
+        <picture>
+          <source
+            srcset="./images/logo-header.png 1x, ./images/logo-header@2x.png 2x"
+            media="(min-width: 320px)"
+          />
+          <img src="./images/logo-header.png" alt="Logo" />
+        </picture>
+      </a>
 
       <ul class="main-nav__list">
-        <li class="main-nav__item"><a href="" class="main-nav__link">Home</a></li>
-        <li class="main-nav__item"><a href="" class="main-nav__link">About us</a></li>
-        <li class="main-nav__item"><a href="" class="main-nav__link">How it’s made?</a></li>
-        <li class="main-nav__item"><a href="" class="main-nav__link">Our products</a></li>
-        <li class="main-nav__item"><a href="" class="main-nav__link">Contact</a></li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link main-nav__link--current">Home</a>
+        </li>
+        <li class="main-nav__item"><a href="#" class="main-nav__link">About us</a></li>
+        <li class="main-nav__item"><a href="#" class="main-nav__link">How it’s made?</a></li>
+        <li class="main-nav__item"><a href="#" class="main-nav__link">Our products</a></li>
+        <li class="main-nav__item"><a href="#" class="main-nav__link">Contact</a></li>
       </ul>
 
-      <div>
+      <div class="mobile-menu__thumb">
+        <div class="mobile-menu__container" id="mobile-menu__container">
+          <button type="button" class="mobile-menu__button-close">
+            <svg aria-label="Кнопка мобильного меню" width="14" height="14">
+              <use class="mobile-menu__icon-close" href="./images/sprite.svg#menu-close"></use>
+            </svg>
+          </button>
+
+          <button type="button" class="mobile-menu__button-baynow">Buy now</button>
+
+          <nav class="mobile-menu__nav">
+            <a href="#" class="mobile-menu__link current">Home</a>
+            <a href="#" class="mobile-menu__link">About us</a>
+            <a href="#" class="mobile-menu__link">How it's made?</a>
+            <a href="#" class="mobile-menu__link">Our products</a>
+            <a href="#" class="mobile-menu__link">Contact</a>
+          </nav>
+        </div>
+
         <button type="button" class="mobile-menu__burger">
           <svg width="20" height="12" aria-label="Кнопка мобильного меню">
             <use class="mobile-menu__menu-icon" href="./images/sprite.svg#menu-burger"></use>
@@ -51,18 +96,16 @@
         </ul>
       </div>
 
-      <div class="hero__bg-circle"></div>
-      <picture>
-        <source srcset="./images/hero-icecream-mobile.png 1x" media="(max-width: 767px)" />
-        <source srcset="./images/hero-icecream-desktop.png 1x" media="(min-width: 1200px)" />
-        <source srcset="./images/hero-icecream-tablet.png 1x" media="(min-width: 768px)" />
-        <img class="hero__img" src="./images/hero-icecream-tablet.png" alt="Foto icecream" />
-      </picture>
-
       <div class="hero__secondary-img-thumb">
         <picture>
-          <source srcset="./images/hero-milk-tablet.png 1x" media="(max-width: 1199px)" />
-          <source srcset="./images/hero-milk-desktop.png 1x" media="(min-width: 1200px)" />
+          <source
+            srcset="./images/hero-milk-tablet.png 1x, ./images/hero-milk-tablet@2x.png 2x"
+            media="(max-width: 1199px)"
+          />
+          <source
+            srcset="./images/hero-milk-desktop.png 1x, ./images/hero-milk-desktop@2x.png 2x"
+            media="(min-width: 1200px)"
+          />
           <img class="hero__img--milk" src="./images/hero-milk-tablet.png" alt="Milk" />
         </picture>
 
@@ -73,8 +116,20 @@
           </p>
 
           <picture>
-            <source srcset="./images/hero-bnt-arrow-tablet.png 1x" media="(max-width: 1199px)" />
-            <source srcset="./images/hero-bnt-arrow-desktop.png 1x" media="(min-width: 1200px)" />
+            <source
+              srcset="
+                ./images/hero-bnt-arrow-tablet.png    1x,
+                ./images/hero-bnt-arrow-tablet@2x.png 2x
+              "
+              media="(max-width: 1199px)"
+            />
+            <source
+              srcset="
+                ./images/hero-bnt-arrow-desktop.png    1x,
+                ./images/hero-bnt-arrow-desktop@2x.png 2x
+              "
+              media="(min-width: 1200px)"
+            />
             <img
               class="secondary-img__button"
               src="./images/hero-bnt-arrow-tablet.png"
@@ -85,8 +140,14 @@
       </div>
 
       <picture>
-        <source srcset="./images/hero-girl-tablet.png 1x" media="(max-width: 1199px)" />
-        <source srcset="./images/hero-girl-desktop.png 1x" media="(min-width: 1200px)" />
+        <source
+          srcset="./images/hero-girl-tablet.png 1x, ./images/hero-girl-tablet@2x.png 2x"
+          media="(max-width: 1199px)"
+        />
+        <source
+          srcset="./images/hero-girl-desktop.png 1x, ./images/hero-girl-desktop@2x.png 2x"
+          media="(min-width: 1200px)"
+        />
         <img class="hero__img--girl" src="./images/hero-girl-tablet.png" alt="Girl with icecream" />
       </picture>
     </section>
