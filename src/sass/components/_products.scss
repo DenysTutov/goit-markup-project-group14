@@ -77,7 +77,7 @@
   }
 }
 
-.product-list__ice {
+.product-item__ice {
   width: 280px;
   height: 598px;
   z-index: 1;
@@ -96,7 +96,7 @@
 
 }
 
-.product-list__ice::before {
+.product-item__ice::before {
   content: '';
   position: absolute;
   top: 19%;
@@ -120,7 +120,7 @@
 
 }
 
-.product-list__coffe {
+.product-item__coffe {
   width: 280px;
   height: 598px;
   z-index: 1;
@@ -138,7 +138,7 @@
   }
 }
 
-.product-list__coffe::before {
+.product-item__coffe::before {
   content: '';
   position: absolute;
   top: 19%;
@@ -162,7 +162,7 @@
 
 }
 
-.product-list__shake {
+.product-item__shake {
   width: 280px;
   height: 598px;
   z-index: 1;
@@ -178,7 +178,7 @@
   }
 }
 
-.product-list__shake::before {
+.product-item__shake::before {
   content: '';
   position: absolute;
   top: 19%;
