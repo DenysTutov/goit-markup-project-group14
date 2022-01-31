@@ -3,50 +3,44 @@
     background-image: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 1) 10%,
-    rgba(255, 245, 246, 1) 10%,
-    );
-
+    rgba(255, 245, 246, 1) 10%,);
     padding-top: 86px;
     padding-left: 30px;
     padding-right: 30px;
 
     @media screen and (min-width: 768px) {
+        padding-top: 119px;
         padding-left: 36px;
         padding-right: 36px;
         background-image: linear-gradient(
         to bottom,
-        rgba(255, 255, 255, 1) 21%,
-        rgba(255, 245, 246, 1) 21%,
+        rgba(255, 255, 255, 1) 24%,
+        rgba(255, 245, 246, 1) 24%,
     );
     }
     @media screen and (min-width: 1200px) {
+        padding-top: 132px;
         padding-left: 0px;
         padding-right: 0px;
+        background-image: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 1) 27%,
+            rgba(255, 245, 246, 1) 27%,);
     }
-        // background-position: center;
-        // background-size: cover;
-    
-
-        // @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        // background-image: url(../images/spots@2x.png);
-        // }
-        
     }
 
 .container-bcg__spots {
     @media screen and (min-width: 1200px) {
         padding-left: 70px;
         padding-right: 70px;
-        width: 100%;
-        // margin-left: auto;
-        // margin-right: auto;
+        // width: 100%;
         background-repeat: no-repeat;
-        background-size: center;
-        background-position: top 105px left -350px;
-        background-image: url("../images/spots-full.png");
+        background-size: contain;
+        background-position: top 105px left 0px;
+        background-image: url("../images/spots.png");
 
         @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-            background-image: url("../images/spots-full@2x.png");
+            background-image: url("../images/spots@2x.png");
             }
     }
 }
@@ -237,35 +231,23 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        
     }
 }
 
 .btn__contacts--locations {
     @include main-font(16px, bold, 21px);
     @include secondary-button;
-    // color: $main-text-color;
-    // background: $accent-main-color;
-    // border-radius: 22px;
-    // border: none;
-    
     width: 161px;
     justify-content: center;
-    // height: 44px;
     padding-left: 10px;
     padding-right: 10px;
-    // margin-bottom: 10px;
     &::after {
         content: ' ';
         display: block;
         width: 6px;
         height: 10px;
         margin-left: 8px;
-    
-    //     background-image: url('../images/arrow-in-secondary-button.svg');
-    //     background-size: contain;
-    //     background-repeat: no-repeat;
-    //     background-position: center;
+
         transform: translateY(2px);
       }
 
@@ -323,21 +305,20 @@
     opacity: 1;
     transition: opacity 250ms $cubic-timing;
 
-    z-index: 300;
-  }
-
-  .backdrop--is-hidden {
+  &--is-hidden {
     opacity: 0;
     pointer-events: none;
+  }
   }
 
   .contacts-modal {
     position: absolute;
     min-width: 320px;
-    height: 581px;
+    height: 100%;
     padding: 15px 30px 15px 30px;
     top: 50%;
     left: 50%;
+    overflow-y: scroll;
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms $cubic-timing;
 
@@ -345,11 +326,41 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+
+    @media screen and (max-width: 767px) {
     background-image: url("../images/milk-mobile.png");
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: bottom 0px right 0px;
-    
+    background-position: bottom 250px right 0px;   
+    }
+
+    @media screen and (min-width: 768px) {
+        min-width: 768px;
+        background-repeat: no-repeat;
+        background-size: center;
+        padding-left: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        // min-width: 768px;
+         background-image: url("../images/ice-cream-modal-tablet.png");
+       
+        background-position: bottom 10px right 10px;
+
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url("../images/ice-cream-modal-tablet@2x.png");
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        min-width: 850px;
+        background-image: url("../images/ice-cream-modal-tablet.png");
+        // background-size: contain;
+        background-position: bottom 0px right 0px;
+
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url("../images/ice-cream-modal-tablet@2x.png");
+        }
+    }
 
     // background-image: url("../images/ice-cream-modal-mobile.png");
     // background-repeat: no-repeat;
@@ -373,35 +384,45 @@
     //     }
     //   }
   
-    @media screen and (min-width: 768px) {
-        background-repeat: no-repeat;
-        background-size: center;
-        padding-left: 50px;
-        min-width: 768px;
-        background-image: url("../images/ice-cream-modal-tablet.png");
-        background-position: bottom 10px right 10px;
+    // @media screen and (min-width: 768px) {
+    //     background-repeat: no-repeat;
+    //     background-size: center;
+    //     padding-left: 50px;
+    //     margin-left: auto;
+    //     margin-right: auto;
+    //     // min-width: 768px;
+    //     background-image: url("../images/ice-cream-modal-tablet.png");
+    //     background-position: bottom 10px right 10px;
 
-        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        background-image: url("../images/ice-cream-modal-tablet@2x.png");
-        }
-    }
+    //     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    //     background-image: url("../images/ice-cream-modal-tablet@2x.png");
+    //     }
+    // }
 
-    @media screen and (min-width: 1200px) {
-        min-width: 768px;
-        background-image: url("../images/ice-cream-modal-tablet.png");
-        background-size: contain;
-        background-position: bottom 10px right 10px;
+    // @media screen and (min-width: 1200px) {
+    //     width: 100%;
+    //     background-image: url("../images/ice-cream-modal-tablet.png");
+    //     background-size: contain;
+    //     background-position: bottom 0px right 0px;
      
 
-        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        background-image: url("../images/ice-cream-modal-tablet@2x.png");
-        }
-    }
+    //     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    //     background-image: url("../images/ice-cream-modal-tablet@2x.png");
+    //     }
+    // }
 
     .backdrop--is-hidden & {
       transform: translate(-50%, -50%) scale(1.1);
     }
   }
+
+//   .contacts-modal__icecream-box {
+//       width: 100px;
+//       height: 100px;
+//       position: absolute;
+//       right: 0px;
+//       bottom: 0px;
+
 
   .contacts-modal__button-close {
     position: absolute;
@@ -427,9 +448,7 @@
     position: absolute;
     top: 8px;
     right: 7px;
-    transition: background-color 250ms $cubic-timing;
-
-    
+    transition: background-color 250ms $cubic-timing; 
     }
   
 
@@ -438,7 +457,6 @@
      display: flex;
      align-items: center;
      justify-content: center;
-    
  }
 
  .modal__location-city {
