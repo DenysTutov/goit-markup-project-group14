@@ -160,8 +160,11 @@ a {
   color: #d41443;
 }
 
-.mobile-menu__burger {
+.main-nav__link--current {
+  color: #d41443;
+}
 
+.mobile-menu__burger {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -203,16 +206,20 @@ a {
     padding-left: 37px;
     padding-right: 37px;
     border-radius: 22px;
-
+    color: #d41443;
+    background-color: #ffffff;
+    -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     font-family: "DM Sans", sans-serif;
     font-style: normal;
     font-size: 16px;
     font-weight: 700;
     line-height: 1.3125;
     letter-spacing: 0;
-    color: #d41443;
-    background-color: #ffffff;
     margin-left: 30px;
+  }
+  .header__button-baynow:hover, .header__button-baynow:focus {
+    background-color: #ecebeb;
   }
   .header__button-baynow::after {
     content: ' ';
@@ -220,7 +227,7 @@ a {
     width: 6px;
     height: 10px;
     margin-left: 12px;
-    background-image: url("../images/arrow-in-button.svg");
+    background-image: url("../images/arrow-in-main-button.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -237,7 +244,6 @@ a {
 
 .mobile-menu__container.is-hidden ~ .header__button-baynow {
   display: none;
-
 }
 
 .content-thumb {
@@ -326,7 +332,6 @@ a {
   }
 }
 
-
 @media screen and (min-width: 1200px) {
   .hero__title-accent {
     font-family: "Titan One", sans-serif;
@@ -335,18 +340,6 @@ a {
     font-weight: 400;
     line-height: 0.91379;
     letter-spacing: 0;
-    text-transform: uppercase;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .hero__title-accent {
-    font-family: "Titan One", sans-serif;
-    font-style: 400;
-    font-size: 58px;
-    font-weight: 400;
-    line-height: 0.91379;
-    letter-spacing: 0.04em;
     text-transform: uppercase;
   }
 }
@@ -461,16 +454,6 @@ a {
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .hero__bg-circle {
-    width: 538px;
-    height: 538px;
-    position: absolute;
-    bottom: 75px;
-    right: 190px;
   }
 }
 
@@ -685,13 +668,47 @@ a {
     font-weight: 400;
     line-height: 1.42857;
     letter-spacing: 0;
-
   }
 }
 
 .section-about {
   background-color: #fff5f6;
+}
 
+@media screen and (max-width: 767px) {
+  .section-about {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0px 700px;
+    background-image: url(../images/milk-mobile.png);
+  }
+}
+
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+  .section-about {
+    background-image: url(../images/milk-mobile@2x.png);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-about {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0px 350px;
+    background-image: url(../images/milk-des.png);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .section-about {
+    background-image: url(../images/milk-des@2x.png);
+  }
 }
 
 .section-about__label {
@@ -973,13 +990,14 @@ a {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url("../images/milk-mobile.png");
+    -webkit-transform: translateY(1px);
+            transform: translateY(1px);
   }
 }
 
-@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
-  .container__text-gray {
-    background-image: url("../images/milk-mobile@2x.png");
+@media screen and (min-width: 1200px) {
+  .section-about__button:hover {
+    background-color: #ecebeb;
   }
 }
 
@@ -988,7 +1006,273 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
 
+.title-hidden {
+  position: fixed;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.advantages-section {
+  width: 100%;
+  padding-top: 39px;
+  padding-bottom: 97px;
+  background-color: #fff5f6;
+}
+
+@media screen and (min-width: 768px) {
+  .advantages-section {
+    padding-top: 66px;
+    padding-bottom: 140px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages-section {
+    padding-top: 39px;
+    padding-bottom: 139px;
+  }
+}
+
+.container--advantages {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .container--advantages {
+    padding-right: 36px;
+    padding-left: 36px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container--advantages {
+    padding-right: 115px;
+    padding-left: 115px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .advantages__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .advantages__list_item:not(:last-child) {
+    margin-right: -60px;
+  }
+}
+
+.advantages__item {
+  width: 230px;
+  margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .advantages__item:not(:last-child) {
+    margin-bottom: 38px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .advantages__item {
+    width: calc(100% / 3 - 60px);
+    margin-bottom: 0;
+  }
+  .advantages__item:not(:last-child) {
+    margin-right: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages__item {
+    -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .advantages__item:hover, .advantages__item:focus {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+.advantages__title {
+  margin-bottom: 15px;
+  font-family: "Titan One", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #d41443;
+}
+
+@media screen and (min-width: 768px) {
+  .advantages__title {
+    font-size: 48px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages__title {
+    font-size: 58px;
+  }
+}
+
+.advantages__text {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #000000;
+}
+
+@media screen and (min-width: 768px) {
+  .advantages__text {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages__text {
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+  }
+}
+
+.advantages__title--icemilk::before {
+  content: ' ';
+  display: block;
+  margin-bottom: 16px;
+  max-width: 33px;
+  height: 50px;
+  background-image: url(../images/advantages/icemilk-mobile.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .advantages__title--icemilk::before {
+    background-image: url(../images/advantages/icemilk-mobile@2x.png);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .advantages__title--icemilk::before {
+    margin-bottom: 36px;
+    background-image: url(../images/advantages/icemilk-tablet.png);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .advantages__title--icefruits::before {
+    background-image: url(../images/advantages/icemilk-tablet@2x.png);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .advantages__title--icemilk::before {
+    margin-bottom: 40px;
+    background-image: url(../images/advantages/icemilk-desktop.png);
+  }
+}
+
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .advantages__title--icefruits::before {
+    background-image: url(../images/advantages/icemilk-desktop@2x.png);
+  }
+}
+
+.advantages__title--icefruits::before {
+  content: ' ';
+  display: block;
+  margin-bottom: 16px;
+  max-width: 50px;
+  height: 50px;
+  background-image: url(../images/advantages/icefruits-mobile.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .advantages__title--icefruits::before {
+    background-image: url(../images/advantages/icefruits-mobile@2x.png);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .advantages__title--icefruits::before {
+    margin-bottom: 36px;
+    background-image: url(../images/advantages/icefruits-tablet.png);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .advantages__title--icefruits::before {
+    background-image: url(../images/advantages/icefruits-tablet@2x.png);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages__title--icefruits::before {
+    margin-bottom: 40px;
+    background-image: url(../images/advantages/icefruits-desktop.png);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .advantages__title--icefruits::before {
+    background-image: url(../images/advantages/icefruits-desktop@2x.png);
+  }
+}
+
+.advantages__title--icecream::before {
+  content: ' ';
+  display: block;
+  margin-bottom: 16px;
+  max-width: 44px;
+  height: 50px;
+  background-image: url(../images/advantages/icecream-mobile.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .advantages__title--icecream::before {
+    background-image: url(../images/advantages/icecream-mobile@2x.png);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .advantages__title--icecream::before {
+    margin-bottom: 36px;
+    background-image: url(../images/advantages/icecream-tablet.png);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .advantages__title--icecream::before {
+    background-image: url(../images/advantages/icecream-tablet@2x.png);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages__title--icecream::before {
+    margin-bottom: 40px;
+    background-image: url(../images/advantages/icecream-desktop.png);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .advantages__title--icecream::before {
+    background-image: url(../images/advantages/icecream-desktop@2x.png);
   }
 }
 
@@ -1270,7 +1554,6 @@ a {
     padding-right: 36px;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(21%, white), color-stop(21%, #fff5f6));
     background-image: linear-gradient(to bottom, white 21%, #fff5f6 21%);
-
   }
 }
 
@@ -1330,7 +1613,6 @@ a {
 @media screen and (max-width: 767px) {
   .contacts__list-item:not(:last-child) {
     margin-bottom: 20px;
-
   }
 }
 
@@ -1341,7 +1623,6 @@ a {
   }
   .contacts__list-item:not(:last-child) {
     margin-right: 20px;
-
   }
 }
 
@@ -1378,12 +1659,10 @@ a {
     line-height: 1.875;
     letter-spacing: 0.04em;
     margin-bottom: 30px;
-
   }
 }
 
 @media screen and (min-width: 1200px) {
-
   .contacts__list-category {
     margin-bottom: 32px;
   }
@@ -1418,12 +1697,10 @@ a {
     line-height: 1.85714;
     letter-spacing: 0.04em;
     margin-bottom: 14px;
-
   }
 }
 
 @media screen and (min-width: 1200px) {
-
   .contacts__list-city {
     font-family: "DM Sans", sans-serif;
     font-style: normal;
@@ -1553,7 +1830,6 @@ a {
     font-weight: 500;
     line-height: 1.85714;
     letter-spacing: 0.04em;
-
   }
 }
 
@@ -1669,12 +1945,10 @@ a {
     width: 174px;
     padding-left: 20px;
     padding-right: 20px;
-
   }
 }
 
 @media screen and (min-width: 1200px) {
-
   .btn__contacts--locations {
     width: 198px;
   }
@@ -1851,6 +2125,5 @@ a {
   fill: #ffa5ba;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 /*# sourceMappingURL=main.css.map */
