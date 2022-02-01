@@ -1939,11 +1939,10 @@ a {
 }
 
 .product-item__ice {
-  width: 280px;
-  height: 598px;
-  z-index: 1;
+  width: 100%;
+  background-color: #ffb8ca;
+  border-radius: 24px;
   margin-bottom: 17px;
-  position: relative;
 }
 
 @media screen and (min-width: 768px) {
@@ -1958,42 +1957,14 @@ a {
   .product-item__ice {
     margin-right: 24px;
     width: 335px;
-  }
-}
-
-.product-item__ice::before {
-  content: '';
-  position: absolute;
-  top: 19%;
-  left: 0;
-  width: 280px;
-  height: 485px;
-  background-color: #ffb8ca;
-  border-radius: 24px;
-  z-index: 2;
-}
-
-@media screen and (min-width: 768px) {
-  .product-item__ice::before {
-    margin-right: 20px;
-    width: 220px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .product-item__ice::before {
-    margin-right: 24px;
-    width: 335px;
-    top: 35%;
   }
 }
 
 .product-item__coffe {
-  width: 280px;
-  height: 598px;
-  z-index: 1;
+  width: 100%;
+  background-color: #f0d1a5;
+  border-radius: 24px;
   margin-bottom: 17px;
-  position: relative;
 }
 
 @media screen and (min-width: 768px) {
@@ -2008,42 +1979,14 @@ a {
   .product-item__coffe {
     margin-right: 24px;
     width: 335px;
-  }
-}
-
-.product-item__coffe::before {
-  content: '';
-  position: absolute;
-  top: 19%;
-  left: 0;
-  width: 280px;
-  height: 485px;
-  background-color: #f0d1a5;
-  border-radius: 24px;
-  z-index: 2;
-}
-
-@media screen and (min-width: 768px) {
-  .product-item__coffe::before {
-    margin-right: 20px;
-    width: 220px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .product-item__coffe::before {
-    margin-right: 24px;
-    width: 335px;
-    top: 35%;
   }
 }
 
 .product-item__shake {
-  width: 280px;
-  height: 598px;
-  z-index: 1;
+  width: 100%;
+  background-color: #c2e297;
+  border-radius: 24px;
   margin-bottom: 17px;
-  position: relative;
 }
 
 @media screen and (min-width: 768px) {
@@ -2056,31 +1999,6 @@ a {
 @media screen and (min-width: 1280px) {
   .product-item__shake {
     width: 335px;
-  }
-}
-
-.product-item__shake::before {
-  content: '';
-  position: absolute;
-  top: 19%;
-  left: 0;
-  width: 280px;
-  height: 485px;
-  background-color: #c2e297;
-  border-radius: 24px;
-  z-index: 2;
-}
-
-@media screen and (min-width: 768px) {
-  .product-item__shake::before {
-    width: 220px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .product-item__shake::before {
-    width: 335px;
-    top: 35%;
   }
 }
 
