@@ -1,21 +1,15 @@
 .section-about {
   background-color: $section-bg-color;
-}
-.container-mm {
-  @media screen and (max-width: 767px) {
-    //height: 133px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 90% 90%;
-    background-image: url(../images/milk-mobile.png);
 
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(../images/milk-mobile@2x.png);
-    }
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 90% 90%;
+  background-image: url(../images/milk-mobile.png);
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/milk-mobile@2x.png);
   }
+
   @media screen and (min-width: 1200px) {
     width: 100%;
     margin-left: auto;
