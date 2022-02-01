@@ -253,10 +253,13 @@
 
 .product-list__header::before {
   content: '';
+  background-image: url('./images/ice-mob.png');
   width: 280px;
   position: absolute;
+  // left: 0;
+  // bottom: 0;
   // z-index: 1;
-  background-image: url('../images/ice-mob.png');
+  
 
 }
 
