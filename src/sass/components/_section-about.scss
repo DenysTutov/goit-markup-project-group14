@@ -122,11 +122,11 @@
 
 @keyframes rotateY {
   0% {
-    transform: perspective(1000px) rotateY(60deg);
+    transform: perspective(1000px) rotateY(15deg);
   }
 
   100% {
-    transform: perspective(1000px) rotateY(-60deg);
+    transform: perspective(1000px) rotateY(-15deg);
   }
 }
 
@@ -169,7 +169,7 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.backdrop.is-hidden {
+.backdrop--is-hidden {
   opacity: 0;
   pointer-events: none;
 }
