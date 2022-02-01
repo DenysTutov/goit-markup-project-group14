@@ -30,7 +30,6 @@ a {
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
-  outline: 1px solid green;
 }
 
 @media screen and (min-width: 480px) {
@@ -186,12 +185,12 @@ a {
   display: none;
 }
 
-.header__button-baynow {
+.header__button-buynow {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
-  .header__button-baynow {
+  .header__button-buynow {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -219,10 +218,10 @@ a {
     letter-spacing: 0;
     margin-left: 30px;
   }
-  .header__button-baynow:hover, .header__button-baynow:focus {
+  .header__button-buynow:hover, .header__button-buynow:focus {
     background-color: #ecebeb;
   }
-  .header__button-baynow::after {
+  .header__button-buynow::after {
     content: ' ';
     display: block;
     width: 6px;
@@ -238,12 +237,12 @@ a {
 }
 
 @media screen and (min-width: 1200px) {
-  .header__button-baynow {
+  .header__button-buynow {
     margin-left: 0;
   }
 }
 
-.mobile-menu__container.is-hidden ~ .header__button-baynow {
+.mobile-menu__container.is-hidden ~ .header__button-buynow {
   display: none;
 }
 
@@ -1445,7 +1444,7 @@ a {
   }
 }
 
-.mobile-menu__button-baynow {
+.mobile-menu__button-buynow {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1471,6 +1470,12 @@ a {
   font-weight: 700;
   line-height: 1.3125;
   letter-spacing: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 44px;
   margin-left: auto;
   margin-right: auto;
@@ -1485,11 +1490,11 @@ a {
   letter-spacing: 0;
 }
 
-.mobile-menu__button-baynow:hover, .mobile-menu__button-baynow:focus {
+.mobile-menu__button-buynow:hover, .mobile-menu__button-buynow:focus {
   background-color: #ecebeb;
 }
 
-.mobile-menu__button-baynow::after {
+.mobile-menu__button-buynow::after {
   content: ' ';
   display: block;
   width: 6px;
@@ -1504,7 +1509,8 @@ a {
 }
 
 @media screen and (min-width: 481px) {
-  .mobile-menu__button-baynow {
+  .mobile-menu__button-buynow {
+    width: 75%;
     padding-left: 43px;
     padding-right: 43px;
   }
@@ -1558,12 +1564,6 @@ a {
   line-height: 1.28571;
   letter-spacing: 0;
   color: #ffffff;
-}
-
-@media screen and (min-width: 481px) {
-  .mobile-menu__link {
-    padding-left: 24px;
-  }
 }
 
 .mobile-menu__link.hover, .mobile-menu__link.focus, .mobile-menu__link.current {

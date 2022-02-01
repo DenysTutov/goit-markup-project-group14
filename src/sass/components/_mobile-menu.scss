@@ -26,8 +26,10 @@
   z-index: 100;
 }
 
-.mobile-menu__button-baynow {
+.mobile-menu__button-buynow {
   @include base-button;
+  display: flex;
+  justify-content: center;
 
   height: 44px;
   margin-left: auto;
@@ -39,6 +41,8 @@
   @include main-font(16px, 700, 21px, 0);
 
   @media screen and (min-width: 481px) {
+    width: 75%;
+
     padding-left: 43px;
     padding-right: 43px;
   }
@@ -80,10 +84,6 @@
   @include main-font(14px, 700, 18px, 0);
 
   color: $main-text-color;
-
-  @media screen and (min-width: 481px) {
-    padding-left: 24px;
-  }
 
   &.hover,
   &.focus,
