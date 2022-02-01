@@ -66,7 +66,7 @@
 //     }
 //   }
 // }
-#gallery {
+.gallery-section {
   @media screen and (max-width: 767px) {
     background-image: linear-gradient(to bottom, #fff5f6 67%, #ffffff 68%);
   }
@@ -77,29 +77,28 @@
     background-image: linear-gradient(to bottom, #fff5f6 54%, #ffffff 55%);
   }
 }
+
 .gallery {
   @media screen and (max-width: 767px) {
     padding-top: 97px;
   }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+
+  @media screen and (min-width: 768px) {
     padding-top: 140px;
-    max-width: 621px;
-    padding-left: 0;
-    padding-right: 0;
+
+    padding-left: 40px;
+    padding-right: 40px;
   }
+
   @media screen and (min-width: 1200px) {
     padding-top: 139px;
-    max-width: 1011px;
-    padding-left: 0;
-    padding-right: 0;
+
+    padding-left: 50px;
+    padding-right: 50px;
   }
-  &__picture {
-    display: block;
-  }
+
   &__img {
     display: block;
     width: 100%;
-    margin-right: auto;
-    margin-left: auto;
   }
 }

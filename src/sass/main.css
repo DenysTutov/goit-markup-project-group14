@@ -30,6 +30,7 @@ a {
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
+  outline: 1px solid green;
 }
 
 @media screen and (min-width: 480px) {
@@ -1172,49 +1173,20 @@ a {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.title-hidden {
-  position: fixed;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-}
-
 .advantages-section {
-  width: 100%;
   padding-top: 39px;
-  padding-bottom: 97px;
   background-color: #fff5f6;
 }
 
 @media screen and (min-width: 768px) {
   .advantages-section {
     padding-top: 66px;
-    padding-bottom: 140px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .advantages-section {
     padding-top: 39px;
-    padding-bottom: 139px;
-  }
-}
-
-.container--advantages {
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
-@media screen and (min-width: 768px) {
-  .container--advantages {
-    padding-right: 36px;
-    padding-left: 36px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .container--advantages {
-    padding-right: 115px;
-    padding-left: 115px;
   }
 }
 
@@ -1804,21 +1776,21 @@ a {
 }
 
 @media screen and (max-width: 767px) {
-  #gallery {
+  .gallery-section {
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(67%, #fff5f6), color-stop(68%, #ffffff));
     background-image: linear-gradient(to bottom, #fff5f6 67%, #ffffff 68%);
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  #gallery {
+  .gallery-section {
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(61%, #fff5f6), color-stop(62%, #ffffff));
     background-image: linear-gradient(to bottom, #fff5f6 61%, #ffffff 62%);
   }
 }
 
 @media screen and (min-width: 1200px) {
-  #gallery {
+  .gallery-section {
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(54%, #fff5f6), color-stop(55%, #ffffff));
     background-image: linear-gradient(to bottom, #fff5f6 54%, #ffffff 55%);
   }
@@ -1830,33 +1802,25 @@ a {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .gallery {
     padding-top: 140px;
-    max-width: 621px;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .gallery {
     padding-top: 139px;
-    max-width: 1011px;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 50px;
+    padding-right: 50px;
   }
-}
-
-.gallery__picture {
-  display: block;
 }
 
 .gallery__img {
   display: block;
   width: 100%;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .product {
@@ -1867,12 +1831,6 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   padding-top: 121px;
   padding-bottom: 98px;
 }
@@ -1891,7 +1849,7 @@ a {
   }
 }
 
-.product-text {
+.product-label {
   font-family: Titan One;
   font-style: normal;
   font-weight: normal;
@@ -1907,14 +1865,14 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-  .product-text {
+  .product-label {
     font-size: 26px;
     line-height: 1.15;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .product-text {
+  .product-label {
     font-size: 30px;
     line-height: 1.13;
   }
@@ -2261,25 +2219,21 @@ a {
     padding-top: 132px;
     padding-left: 0px;
     padding-right: 0px;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(27%, white), color-stop(27%, #fff5f6));
-    background-image: linear-gradient(to bottom, white 27%, #fff5f6 27%);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .container-bcg__spots {
-    padding-left: 70px;
-    padding-right: 70px;
+    background-image: url("../images/spots.png"), -webkit-gradient(linear, left top, left bottom, color-stop(27%, white), color-stop(27%, #fff5f6));
+    background-image: url("../images/spots.png"), linear-gradient(to bottom, white 27%, #fff5f6 27%);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: top 105px left 0px;
-    background-image: url("../images/spots.png");
+    background-position: center;
   }
 }
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .container-bcg__spots {
-    background-image: url("../images/spots@2x.png");
+  .contacts-section {
+    background-image: url("../images/spots@2x.png"), -webkit-gradient(linear, left top, left bottom, color-stop(27%, white), color-stop(27%, #fff5f6));
+    background-image: url("../images/spots@2x.png"), linear-gradient(to bottom, white 27%, #fff5f6 27%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
   }
 }
 
@@ -2428,7 +2382,7 @@ a {
   color: #907e82;
   padding-bottom: 25px;
   margin-bottom: 25px;
-  border-bottom: 1px solid #E1E1E1;
+  border-bottom: 1px solid #e1e1e1;
 }
 
 @media screen and (min-width: 768px) {
@@ -2489,7 +2443,7 @@ a {
   color: #ffa5ba;
   padding-bottom: 25px;
   margin-bottom: 25px;
-  border-bottom: 1px solid #E1E1E1;
+  border-bottom: 1px solid #e1e1e1;
 }
 
 .contacts__list-address {
