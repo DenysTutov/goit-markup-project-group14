@@ -241,10 +241,9 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #ffffff;
-  // margin-bottom: 66px;
+  padding-top:161 ;
   position: relative;
-  // z-index: 3;
-
+  
   @media screen and (min-width: 1280px) {
     wfont-size: 30px;
     line-height: 1.15;
@@ -259,14 +258,17 @@
   position: absolute;
   left: 0;
   top: 0;
-  // z-index: 1;
-  
+   
 
 }
 
 .product-list__header::after {
   content: '';
   background-image: url('../images/dots.png');
+  width: 26px;
+  height: 6px;
+  display: flex;
+  margin: 0 auto;
 }
 
 .product-list__text {
