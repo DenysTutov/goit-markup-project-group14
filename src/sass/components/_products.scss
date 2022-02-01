@@ -254,10 +254,11 @@
 .product-list__header::before {
   content: '';
   background-image: url('../images/ice-mob.png');
-  width: 280px;
+  width: 249px;
+  height: 252px;
   position: absolute;
-  // left: 0;
-  // bottom: 0;
+  left: 0;
+  top: 0;
   // z-index: 1;
   
 
