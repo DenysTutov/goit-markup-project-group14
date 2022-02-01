@@ -1948,7 +1948,7 @@ a {
 @media screen and (min-width: 768px) {
   .product-item__ice {
     margin-right: 20px;
-    width: 220px;
+    width: 100%;
     margin-bottom: 0;
   }
 }
@@ -1956,7 +1956,7 @@ a {
 @media screen and (min-width: 1280px) {
   .product-item__ice {
     margin-right: 24px;
-    width: 335px;
+    width: 100%;
   }
 }
 
