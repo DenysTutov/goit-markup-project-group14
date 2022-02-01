@@ -340,7 +340,7 @@
     @media screen and (min-width: 1200px) {
       width: 30px;
       height: 30px;
-      transform: translateX(45px);
+      transform: translateX(60px);
     }
   }
 }
@@ -360,6 +360,10 @@
   @include main-font(8px, 400, 10px, 0);
   color: $main-text-color;
   text-align: right;
+
+  @media screen and (min-width: 1200px) {
+    @include main-font(14px, 400, 18px, 0);
+  }
 }
 
 /////Secondary image
