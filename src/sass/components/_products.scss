@@ -263,6 +263,11 @@
 
 }
 
+.product-list__header::after {
+  content: '';
+  background-image: url('../images/dots.png');
+}
+
 .product-list__text {
   font-family: DM Sans;
   font-style: normal;
