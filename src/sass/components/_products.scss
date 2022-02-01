@@ -210,26 +210,26 @@
 //   }
 // }
 
-.product-list__image {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 0;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 22px;
-  position: inherit;
-  z-index: 3;
+// .product-list__image {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   margin-top: 0;
+//   margin-right: auto;
+//   margin-left: auto;
+//   margin-bottom: 22px;
+//   position: inherit;
+//   z-index: 3;
 
-  @media screen and (min-width: 768px) {
-    width: 220px;
-  }
+//   @media screen and (min-width: 768px) {
+//     width: 220px;
+//   }
 
-  @media screen and (min-width: 1280px) {
-    width: 335px;
-  }
-}
+//   @media screen and (min-width: 1280px) {
+//     width: 335px;
+//   }
+// }
 
 .product-list__header {
   font-family: Titan One;
@@ -241,16 +241,23 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #ffffff;
-
-  margin-bottom: 66px;
-
-  position: inherit;
-  z-index: 3;
+  // margin-bottom: 66px;
+  position: relative;
+  // z-index: 3;
 
   @media screen and (min-width: 1280px) {
     wfont-size: 30px;
     line-height: 1.15;
   }
+}
+
+.product-list__header::before {
+  content: '';
+  width: 280px;
+  position: absolute;
+  // z-index: 1;
+  background-image: url('../images/ice-mob.png');
+
 }
 
 .product-list__text {
