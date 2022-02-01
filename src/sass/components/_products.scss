@@ -138,13 +138,13 @@
 
   @media screen and (min-width: 768px) {
     margin-right: 20px;
-    width: 220px;
+    width: 100%;
     margin-bottom: 0;
   }
 
   @media screen and (min-width: 1280px) {
     margin-right: 24px;
-    width: 335px;
+    width: 100%;
   }
 }
 
@@ -180,12 +180,12 @@
   // position: relative;
 
   @media screen and (min-width: 768px) {
-    width: 220px;
+    width: 100%;
     margin-bottom: 0;
   }
 
   @media screen and (min-width: 1280px) {
-    width: 335px;
+    width: 100%;
   }
 }
 
