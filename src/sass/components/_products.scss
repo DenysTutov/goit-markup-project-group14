@@ -85,8 +85,10 @@
 }
 
 .product-item__ice {
-  width: 280px;
-  height: 598px;
+  width: 100%;
+  background-color: #ffb8ca;
+  border-radius: 24px;
+  // height: 598px;
   z-index: 1;
   margin-bottom: 17px;
   position: relative;
