@@ -2024,7 +2024,7 @@ a {
 
 .product-list__header::before {
   content: '';
-  background-image: url("./images/ice-mob.png");
+  background-image: url("../images/ice-mob.png");
   width: 280px;
   position: absolute;
 }
