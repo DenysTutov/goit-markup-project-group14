@@ -120,13 +120,11 @@
 
   @media screen and (min-width: 768px) {
     @include main-font(14px, 500, 26px);
-
     margin-bottom: 14px;
   }
 
   @media screen and (min-width: 1200px) {
     @include main-font(16px, 500, 30px);
-
     margin-bottom: 10px;
   }
 }
@@ -135,32 +133,32 @@
   @include main-font(12px, 500, 18px);
   color: $third-text-color;
   padding-bottom: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 0px;
   border-bottom: 1px solid #e1e1e1;
 
   @media screen and (min-width: 768px) {
     @include main-font(14px, 500, 23px);
-    margin-bottom: 30px;
+    padding-bottom: 30px;
   }
 
   @media screen and (min-width: 1200px) {
-    margin-bottom: 32px;
-    font-size: 16px;
-    line-height: 1.81;
+    @include main-font(16px, 500, 29px);
+    padding-bottom: 32px;
   }
 }
 
 .contacts__list-days {
   @include main-font(12px, 500, 22px);
+  padding-top: 25px;
 
   @media screen and (min-width: 768px) {
     @include main-font(14px, 500, 26px);
+    padding-top: 30px; 
   }
 
   @media screen and (min-width: 1200px) {
-    font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.04em;
+    @include main-font(16px, 500, 30px);
+    padding-top: 32px; 
   }
 }
 
@@ -168,13 +166,32 @@
   @include main-font(12px, 500, 22px);
   color: $accent-secondary-color;
   padding-bottom: 25px;
-  margin-bottom: 25px;
   border-bottom: 1px solid #e1e1e1;
+  margin-bottom: 0px;
+
+  @media screen and (min-width: 768px) {
+    @include main-font(14px, 500, 26px);
+    padding-bottom: 30px; 
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include main-font(16px, 500, 30px);
+    padding-bottom: 32px; 
+  }
 }
 
 .contacts__list-address {
   @include main-font(12px, 500, 22px);
   color: $third-text-color;
+  padding-top: 25px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 30px; 
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px; 
+  }
 
   &--mail,
   &--phone {
@@ -228,6 +245,7 @@
   justify-content: center;
   padding-left: 10px;
   padding-right: 10px;
+  margin-bottom: 10px;
   &::after {
     content: ' ';
     display: block;
@@ -239,6 +257,7 @@
   }
 
   @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
     margin-right: 15px;
     width: 174px;
     padding-left: 20px;
