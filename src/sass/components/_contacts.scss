@@ -317,41 +317,76 @@
 
 .contacts-modal {
   position: absolute;
-  min-width: 320px;
+
   padding: 15px 30px 15px 30px;
-  top: 50%;
-  left: 50%;
+
+  overflow-y: scroll;
 
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms $cubic-timing;
+  flex-direction: column;
+  align-items: center;
 
   background-color: $main-text-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
 
+  background-image: url('../images/milk-mobile.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
   @media screen and (max-width: 767px) {
-    background-image: url('../images/milk-mobile.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom 250px right 0px;
+    width: 90%;
+    height: 90%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms $cubic-timing;
+
+    .backdrop.is-hidden & {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
   }
 
   @media screen and (min-width: 768px) {
-    min-width: 700px;
-    background-repeat: no-repeat;
-    background-size: center;
-    padding-left: 50px;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    background-image: url('../images/milk-des.png');
+    width: 600px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%) scale(1);
+    transition: transform 250ms $cubic-timing;
+
+    .backdrop.is-hidden & {
+      transform: translate(-50%, -40%) scale(1.1);
+    }
   }
 
-  .backdrop.is-hidden & {
-    transform: translate(-50%, -50%) scale(1.1);
+  @media screen and (min-width: 1200px) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms $cubic-timing;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 1000px;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    .backdrop.is-hidden & {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
   }
 }
 
@@ -382,20 +417,23 @@
   transition: background-color 250ms $cubic-timing;
 }
 
+.contacts-modal__map-thumb {
+  width: 50%;
+}
+
 .contacts-modal__map {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 
   &--tablet {
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 1200px) {
       display: none;
     }
   }
 
   &--mobile {
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 1199px) {
       display: none;
     }
   }
@@ -408,6 +446,4 @@
   color: $accent-main-color;
   margin-top: 15px;
   margin-bottom: 5px;
-  margin-left: auto;
-  margin-right: auto;
 }
