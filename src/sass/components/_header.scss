@@ -99,7 +99,7 @@
   }
 
   .mobile-menu__container.is-hidden ~ & {
-    display: none;
+    opacity: 0;
   }
 }
 

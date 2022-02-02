@@ -1,29 +1,33 @@
 .mobile-menu__container {
-  display: none;
+  opacity: 0;
   position: fixed;
   top: 0;
-  right: 0;
+  right: -255px;
   padding-top: 60px;
 
-  width: 100vw;
+  width: 250px;
   height: 100vh;
 
   background-color: #e17992;
 
+  transition: opacity 250ms $cubic-timing;
+  
   @media screen and (min-width: 481px) {
     width: 254px;
   }
 
   &.is-hidden {
-    display: flex;
+    opacity: 1;
     flex-direction: column;
+    right: 0;
+    z-index: 5;
 
+    transition: opacity 250ms $cubic-timing;
+    
     @media screen and (min-width: 1200px) {
-      display: none;
+      opacity: 0;
     }
   }
-
-  z-index: 100;
 }
 
 .mobile-menu__button-buynow {
@@ -85,9 +89,12 @@
 
   color: $main-text-color;
 
-  &.hover,
-  &.focus,
+  transition: color 250ms $cubic-timing;
+
+  &:hover,
+  &:focus,
   &.current {
+    @include main-font(16px, 700, 18px, 0);
     color: #d41443;
   }
 }
