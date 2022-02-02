@@ -327,51 +327,37 @@
   align-items: center;
 
   background-color: $main-text-color;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
 
   background-image: url('../images/milk-mobile.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 
-  @media screen and (max-width: 767px) {
-    width: 90%;
-    height: 90%;
+  width: 100vw;
+  height: 100vh;
 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    transition: transform 250ms $cubic-timing;
-
-    .backdrop.is-hidden & {
-      transform: translate(-50%, -50%) scale(1.1);
-    }
-  }
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 250ms $cubic-timing;
 
   @media screen and (min-width: 768px) {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
     background-image: url('../images/milk-des.png');
-    width: 600px;
 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -40%) scale(1);
-    transition: transform 250ms $cubic-timing;
-
-    .backdrop.is-hidden & {
-      transform: translate(-50%, -40%) scale(1.1);
-    }
+    transform: translate(-50%, -50%);
   }
 
   @media screen and (min-width: 1200px) {
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%);
     transition: transform 250ms $cubic-timing;
 
     display: flex;
@@ -380,13 +366,11 @@
     justify-content: center;
 
     width: 1000px;
+    height: 600px;
     overflow: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
-
-    .backdrop.is-hidden & {
-      transform: translate(-50%, -50%) scale(1.1);
-    }
+    border-radius: 20px;
   }
 }
 
@@ -402,11 +386,11 @@
   padding: 0px;
   fill: $main-text-color;
   cursor: pointer;
+  transition: background-color 250ms $cubic-timing;
 
   &:hover,
   &:focus {
     background: $accent-main-color;
-    transition: background-color 250ms $cubic-timing;
   }
 }
 
@@ -427,13 +411,13 @@
   justify-content: center;
 
   &--tablet {
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199px) {
       display: none;
     }
   }
 
   &--mobile {
-    @media screen and (min-width: 1199px) {
+    @media screen and (min-width: 1200px) {
       display: none;
     }
   }

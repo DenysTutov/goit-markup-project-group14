@@ -3,6 +3,16 @@
  * Главный файл стилей.
  * Все паршалы подключаются сюда.
  */
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
 ul,
 ol {
   list-style: none;
@@ -818,7 +828,7 @@ a {
   font-weight: 500;
   line-height: 1.58333;
   letter-spacing: 0.04em;
-  color: #000000;
+  color: #907e82;
   margin-bottom: 34px;
 }
 
@@ -826,9 +836,9 @@ a {
   .section-about__text-black {
     font-family: "DM Sans", sans-serif;
     font-style: normal;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
-    line-height: 1.78571;
+    line-height: 1.58333;
     letter-spacing: 0.04em;
     margin-bottom: 36px;
   }
@@ -1053,67 +1063,46 @@ a {
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
   z-index: 100;
-  opacity: 1;
-  overflow-y: scroll;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
 }
 
-.backdrop--is-hidden {
+.backdrop.about-is-hidden {
+  opacity: 0;
+}
+
+.about-is-hidden {
   opacity: 0;
   pointer-events: none;
 }
 
-.backdrop.is-hidden .section-about__modal {
-  -webkit-transform: translate(-50%, -50%) scale(1.1);
-          transform: translate(-50%, -50%) scale(1.1);
-  opacity: 0;
-}
-
 .section-about__modal {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   background-color: #ffffff;
   opacity: 1;
   text-align: left;
   padding-top: 0;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+          box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
 }
 
 @media screen and (max-width: 1199px) {
   .section-about__modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, 50%);
-            transform: translate(-50%, 50%);
-    width: 100%;
-    max-width: 450px;
-    height: 609px;
+    width: 90%;
+    max-width: 600px;
     padding: 40px;
-    -webkit-transform: translate(-50%, -50%) scale(1);
-            transform: translate(-50%, -50%) scale(1);
-    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .section-about__modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, 50%);
-            transform: translate(-50%, 50%);
     min-width: 521px;
     min-height: 581px;
     padding: 40px;
-    -webkit-transform: translate(-50%, -50%) scale(1);
-            transform: translate(-50%, -50%) scale(1);
-    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.02);
-            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.02);
-    border-radius: 4px;
   }
 }
 
@@ -1130,35 +1119,24 @@ a {
   margin-bottom: 15px;
 }
 
-.section-about__close {
+.section-about__icon {
   position: absolute;
   top: 15px;
   right: 15px;
   width: 30px;
   height: 30px;
-  background: #d41443;
+  background: #ffa5ba;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   padding: 0px;
   fill: #ffffff;
   cursor: pointer;
-}
-
-.section-about__icon {
-  position: absolute;
-  top: 8px;
-  right: 7px;
-  width: 14px;
-  height: 14px;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  fill: #000000;
+}
+
+.section-about__icon:hover, .section-about__icon:focus {
+  background: #d41443;
 }
 
 .section-about__close:hover .section-about__close,
@@ -2935,58 +2913,43 @@ a {
       -ms-flex-align: center;
           align-items: center;
   background-color: #ffffff;
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
+  -webkit-box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+          box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   background-image: url("../images/milk-mobile.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-}
-
-@media screen and (max-width: 767px) {
-  .contacts-modal {
-    width: 90%;
-    height: 90%;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%) scale(1);
-            transform: translate(-50%, -50%) scale(1);
-    -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .backdrop.is-hidden .contacts-modal {
-    -webkit-transform: translate(-50%, -50%) scale(1.1);
-            transform: translate(-50%, -50%) scale(1.1);
-  }
+  width: 100vw;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (min-width: 768px) {
   .contacts-modal {
+    background-image: url("../images/milk-des.png");
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    background-image: url("../images/milk-des.png");
-    width: 600px;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -40%) scale(1);
-            transform: translate(-50%, -40%) scale(1);
-    -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .backdrop.is-hidden .contacts-modal {
-    -webkit-transform: translate(-50%, -40%) scale(1.1);
-            transform: translate(-50%, -40%) scale(1.1);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
 
@@ -2994,8 +2957,8 @@ a {
   .contacts-modal {
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%) scale(1);
-            transform: translate(-50%, -50%) scale(1);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -3013,13 +2976,11 @@ a {
         -ms-flex-pack: center;
             justify-content: center;
     width: 1000px;
+    height: 600px;
     overflow: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
-  }
-  .backdrop.is-hidden .contacts-modal {
-    -webkit-transform: translate(-50%, -50%) scale(1.1);
-            transform: translate(-50%, -50%) scale(1.1);
+    border-radius: 20px;
   }
 }
 
@@ -3035,12 +2996,12 @@ a {
   padding: 0px;
   fill: #ffffff;
   cursor: pointer;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-modal__button-close:hover, .contacts-modal__button-close:focus {
   background: #d41443;
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-modal__icon-close {
@@ -3067,13 +3028,13 @@ a {
           justify-content: center;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .contacts-modal__map--tablet {
     display: none;
   }
 }
 
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 1200px) {
   .contacts-modal__map--mobile {
     display: none;
   }
@@ -3365,5 +3326,9 @@ a {
     bottom: 50px;
     right: 100px;
   }
+}
+
+body.modal-open .scrollup {
+  opacity: 0;
 }
 /*# sourceMappingURL=main.css.map */

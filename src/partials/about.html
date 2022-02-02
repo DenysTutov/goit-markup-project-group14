@@ -31,9 +31,11 @@
         </p>
         <p class="section-about__text-gray">Aliquam erat volutpat. Aenean accumsan.</p>
 
-        <button type="button" class="section-about__button">Read more</button>
+        <button type="button" class="section-about__button" data-modalAbout-open>Read more</button>
 
-        <div class="backdrop visually-hidden">
+        <!-- Modal About -->
+
+        <div class="backdrop about-is-hidden" data-modalAbout>
           <div class="section-about__modal">
             <h3 class="section-about__paragraph">Interesting fact</h3>
             <p class="section-about__text-black">
@@ -50,8 +52,8 @@
               qualities and properties, sweeteners, dyes, stabilizers and fillings are added to its
               composition. In each variety they are different and combined.
             </p>
-            <button type="button" class="section-about__close">
-              <svg class="section-about__icon">
+            <button type="button" class="contacts-modal__button-close" data-modalAbout-close>
+              <svg class="contacts-modal__icon-close" width="14" height="14">
                 <use href="./images/sprite.svg#menu-close"></use>
               </svg>
             </button>
