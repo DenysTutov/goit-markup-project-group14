@@ -1939,17 +1939,16 @@ a {
 }
 
 .product-item__ice {
-  width: 280px;
-  height: 598px;
-  z-index: 1;
+  width: 100%;
+  background-color: #ffb8ca;
+  border-radius: 24px;
   margin-bottom: 17px;
-  position: relative;
 }
 
 @media screen and (min-width: 768px) {
   .product-item__ice {
     margin-right: 20px;
-    width: 220px;
+    width: 100%;
     margin-bottom: 0;
   }
 }
@@ -1957,49 +1956,21 @@ a {
 @media screen and (min-width: 1280px) {
   .product-item__ice {
     margin-right: 24px;
-    width: 335px;
-  }
-}
-
-.product-item__ice::before {
-  content: '';
-  position: absolute;
-  top: 19%;
-  left: 0;
-  width: 280px;
-  height: 485px;
-  background-color: #ffb8ca;
-  border-radius: 24px;
-  z-index: 2;
-}
-
-@media screen and (min-width: 768px) {
-  .product-item__ice::before {
-    margin-right: 20px;
-    width: 220px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .product-item__ice::before {
-    margin-right: 24px;
-    width: 335px;
-    top: 35%;
+    width: 100%;
   }
 }
 
 .product-item__coffe {
-  width: 280px;
-  height: 598px;
-  z-index: 1;
+  width: 100%;
+  background-color: #f0d1a5;
+  border-radius: 24px;
   margin-bottom: 17px;
-  position: relative;
 }
 
 @media screen and (min-width: 768px) {
   .product-item__coffe {
     margin-right: 20px;
-    width: 220px;
+    width: 100%;
     margin-bottom: 0;
   }
 }
@@ -2007,114 +1978,27 @@ a {
 @media screen and (min-width: 1280px) {
   .product-item__coffe {
     margin-right: 24px;
-    width: 335px;
-  }
-}
-
-.product-item__coffe::before {
-  content: '';
-  position: absolute;
-  top: 19%;
-  left: 0;
-  width: 280px;
-  height: 485px;
-  background-color: #f0d1a5;
-  border-radius: 24px;
-  z-index: 2;
-}
-
-@media screen and (min-width: 768px) {
-  .product-item__coffe::before {
-    margin-right: 20px;
-    width: 220px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .product-item__coffe::before {
-    margin-right: 24px;
-    width: 335px;
-    top: 35%;
+    width: 100%;
   }
 }
 
 .product-item__shake {
-  width: 280px;
-  height: 598px;
-  z-index: 1;
+  width: 100%;
+  background-color: #c2e297;
+  border-radius: 24px;
   margin-bottom: 17px;
-  position: relative;
 }
 
 @media screen and (min-width: 768px) {
   .product-item__shake {
-    width: 220px;
+    width: 100%;
     margin-bottom: 0;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .product-item__shake {
-    width: 335px;
-  }
-}
-
-.product-item__shake::before {
-  content: '';
-  position: absolute;
-  top: 19%;
-  left: 0;
-  width: 280px;
-  height: 485px;
-  background-color: #c2e297;
-  border-radius: 24px;
-  z-index: 2;
-}
-
-@media screen and (min-width: 768px) {
-  .product-item__shake::before {
-    width: 220px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .product-item__shake::before {
-    width: 335px;
-    top: 35%;
-  }
-}
-
-.product-list__image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 0;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 22px;
-  position: inherit;
-  z-index: 3;
-}
-
-@media screen and (min-width: 768px) {
-  .product-list__image {
-    width: 220px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .product-list__image {
-    width: 335px;
+    width: 100%;
   }
 }
 
@@ -2128,9 +2012,7 @@ a {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #ffffff;
-  margin-bottom: 66px;
-  position: inherit;
-  z-index: 3;
+  position: relative;
 }
 
 @media screen and (min-width: 1280px) {
@@ -2138,6 +2020,13 @@ a {
     wfont-size: 30px;
     line-height: 1.15;
   }
+}
+
+.product-list__header::before {
+  content: '';
+  background-image: url("../images/ice-mob.png");
+  width: 280px;
+  position: absolute;
 }
 
 .product-list__text {
