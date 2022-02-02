@@ -72,10 +72,6 @@
   }
 
   transition: color 250ms $cubic-timing;
-
-  &--current {
-    color: $accent-main-color;
-  }
 }
 
 .mobile-menu__burger {
